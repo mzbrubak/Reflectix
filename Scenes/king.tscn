@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://db4wpu213jqyc"]
+
+[ext_resource type="Script" path="res://Scenes/king.gd" id="1_mpdq4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gbxff"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32aoq"]
+
+[node name="King" type="Node2D"]
+script = ExtResource("1_mpdq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.08616e-07, 0)
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_gbxff")
+
+[node name="OpaqueSurface" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpaqueSurface"]
+shape = SubResource("CircleShape2D_32aoq")
