@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkuug16ke60wh"]
+[gd_scene load_steps=5 format=3 uid="uid://dkuug16ke60wh"]
 
-[ext_resource type="Script" path="res://Scenes/laser.gd" id="1_du4aj"]
+[ext_resource type="Script" path="res://Scenes/laseremitter.gd" id="1_du4aj"]
+[ext_resource type="Script" path="res://Scenes/laser.gd" id="2_q342s"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oqpmt"]
 
@@ -22,9 +23,10 @@ collision_mask = 4
 [node name="BodyShape" type="CollisionShape2D" parent="Body"]
 shape = SubResource("RectangleShape2D_huqak")
 
-[node name="RayCast2D" type="RayCast2D" parent="Body"]
+[node name="Laser" type="RayCast2D" parent="Body"]
 position = Vector2(10, 0)
 enabled = false
 target_position = Vector2(1000, 0)
 collision_mask = 11
 hit_from_inside = true
+script = ExtResource("2_q342s")

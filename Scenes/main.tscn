@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djqevu5mpndwa"]
 
-[ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laser.tscn" id="1_g7mjg"]
+[ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
 [ext_resource type="PackedScene" uid="uid://yocbirg225wt" path="res://Scenes/mirror.tscn" id="2_6nsyl"]
 [ext_resource type="PackedScene" uid="uid://db4wpu213jqyc" path="res://Scenes/king.tscn" id="4_kfvhc"]
@@ -19,11 +19,10 @@ position = Vector2(-62, 37)
 
 [node name="Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(31, 37)
-rotation = 3.14159
-scale = Vector2(1, 1)
+rotation = 1.5708
 
 [node name="King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
-position = Vector2(-25, -19)
+position = Vector2(31, -27)
 
 [node name="Player2Pieces" type="Node2D" parent="."]
 
@@ -32,3 +31,4 @@ position = Vector2(-79, -6)
 rotation = 1.5708
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
+visible = false

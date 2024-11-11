@@ -12,3 +12,5 @@ func _process(_delta):
 
 func destroy():
 	print("You lose!")
+	#put some fun animations here or something, then end-of-game menu
+	#could consider moving this code to main and trigger via signal here
