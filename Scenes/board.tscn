@@ -1,0 +1,505 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn3fhjv74000f"]
+
+[ext_resource type="PackedScene" uid="uid://ccym58eahoa6n" path="res://Scenes/boardspace.tscn" id="1_sgub3"]
+
+[node name="Board" type="Node2D"]
+position = Vector2(-100, 60)
+
+[node name="Spaces" type="Node2D" parent="."]
+
+[node name="A1" parent="Spaces" instance=ExtResource("1_sgub3")]
+
+[node name="A2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(0, -20)
+
+[node name="A3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(0, -40)
+
+[node name="A4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(0, -60)
+
+[node name="A5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(0, -80)
+
+[node name="A6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(0, -100)
+
+[node name="A7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(0, -120)
+
+[node name="A8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(0, -140)
+
+[node name="B1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(20, 0)
+
+[node name="B2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(20, -20)
+
+[node name="B3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(20, -40)
+
+[node name="B4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(20, -60)
+
+[node name="B5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(20, -80)
+
+[node name="B6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(20, -100)
+
+[node name="B7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(20, -120)
+
+[node name="B8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(20, -140)
+
+[node name="C1" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(40, 0)
+
+[node name="C2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(40, -20)
+
+[node name="C3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(40, -40)
+
+[node name="C4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(40, -60)
+
+[node name="C5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(40, -80)
+
+[node name="C6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(40, -100)
+
+[node name="C7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(40, -120)
+
+[node name="C8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(40, -140)
+
+[node name="D1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(60, 0)
+
+[node name="D2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(60, -20)
+
+[node name="D3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(60, -40)
+
+[node name="D4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(60, -60)
+
+[node name="D5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(60, -80)
+
+[node name="D6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(60, -100)
+
+[node name="D7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(60, -120)
+
+[node name="D8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(60, -140)
+
+[node name="E1" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(80, 0)
+
+[node name="E2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(80, -20)
+
+[node name="E3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(80, -40)
+
+[node name="E4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(80, -60)
+
+[node name="E5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(80, -80)
+
+[node name="E6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(80, -100)
+
+[node name="E7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(80, -120)
+
+[node name="E8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(80, -140)
+
+[node name="F1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(100, 0)
+
+[node name="F2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(100, -20)
+
+[node name="F3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(100, -40)
+
+[node name="F4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(100, -60)
+
+[node name="F5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(100, -80)
+
+[node name="F6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(100, -100)
+
+[node name="F7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(100, -120)
+
+[node name="F8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(100, -140)
+
+[node name="G1" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(120, 0)
+
+[node name="G2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(120, -20)
+
+[node name="G3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(120, -40)
+
+[node name="G4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(120, -60)
+
+[node name="G5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(120, -80)
+
+[node name="G6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(120, -100)
+
+[node name="G7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(120, -120)
+
+[node name="G8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(120, -140)
+
+[node name="H1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(140, 0)
+
+[node name="H2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(140, -20)
+
+[node name="H3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(140, -40)
+
+[node name="H4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(140, -60)
+
+[node name="H5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(140, -80)
+
+[node name="H6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(140, -100)
+
+[node name="H7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(140, -120)
+
+[node name="H8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(140, -140)
+
+[node name="I1" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(160, 0)
+
+[node name="I2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(160, -20)
+
+[node name="I3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(160, -40)
+
+[node name="I4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(160, -60)
+
+[node name="I5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(160, -80)
+
+[node name="I6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(160, -100)
+
+[node name="I7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(160, -120)
+
+[node name="I8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(160, -140)
+
+[node name="J1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(180, 0)
+
+[node name="J2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(180, -20)
+
+[node name="J3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(180, -40)
+
+[node name="J4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(180, -60)
+
+[node name="J5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(180, -80)
+
+[node name="J6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(180, -100)
+
+[node name="J7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(180, -120)
+
+[node name="J8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(180, -140)
+
+[node name="K1" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(200, 0)
+
+[node name="K2" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(200, -20)
+
+[node name="K3" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(200, -40)
+
+[node name="K4" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(200, -60)
+
+[node name="K5" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(200, -80)
+
+[node name="K6" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(200, -100)
+
+[node name="K7" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(200, -120)
+
+[node name="K8" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(200, -140)
+
+[node name="L1" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(220, 0)
+
+[node name="L2" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(220, -20)
+
+[node name="L3" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(220, -40)
+
+[node name="L4" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(220, -60)
+
+[node name="L5" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(220, -80)
+
+[node name="L6" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(220, -100)
+
+[node name="L7" parent="Spaces" instance=ExtResource("1_sgub3")]
+modulate = Color(0.411765, 1, 1, 1)
+position = Vector2(220, -120)
+
+[node name="L8" parent="Spaces" instance=ExtResource("1_sgub3")]
+position = Vector2(220, -140)
+
+[node name="Grid Labels" type="Node2D" parent="."]
+
+[node name="A" type="Label" parent="Grid Labels"]
+offset_left = -5.0
+offset_top = 9.0
+offset_right = 35.0
+offset_bottom = 32.0
+text = "A"
+metadata/_edit_use_anchors_ = true
+
+[node name="B" type="Label" parent="Grid Labels"]
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 54.0
+offset_bottom = 32.0
+text = "B"
+metadata/_edit_use_anchors_ = true
+
+[node name="C" type="Label" parent="Grid Labels"]
+offset_left = 35.0
+offset_top = 9.0
+offset_right = 75.0
+offset_bottom = 32.0
+text = "C"
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Label" parent="Grid Labels"]
+offset_left = 54.0
+offset_top = 9.0
+offset_right = 94.0
+offset_bottom = 32.0
+text = "D"
+metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Label" parent="Grid Labels"]
+offset_left = 76.0
+offset_top = 9.0
+offset_right = 116.0
+offset_bottom = 32.0
+text = "E"
+metadata/_edit_use_anchors_ = true
+
+[node name="F" type="Label" parent="Grid Labels"]
+offset_left = 96.0
+offset_top = 9.0
+offset_right = 136.0
+offset_bottom = 32.0
+text = "F"
+metadata/_edit_use_anchors_ = true
+
+[node name="G" type="Label" parent="Grid Labels"]
+offset_left = 114.0
+offset_top = 9.0
+offset_right = 154.0
+offset_bottom = 32.0
+text = "G"
+metadata/_edit_use_anchors_ = true
+
+[node name="H" type="Label" parent="Grid Labels"]
+offset_left = 133.0
+offset_top = 9.0
+offset_right = 173.0
+offset_bottom = 32.0
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Label" parent="Grid Labels"]
+offset_left = 158.0
+offset_top = 9.0
+offset_right = 198.0
+offset_bottom = 32.0
+text = "I"
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Label" parent="Grid Labels"]
+offset_left = 177.0
+offset_top = 9.0
+offset_right = 217.0
+offset_bottom = 32.0
+text = "J"
+metadata/_edit_use_anchors_ = true
+
+[node name="K" type="Label" parent="Grid Labels"]
+offset_left = 195.0
+offset_top = 9.0
+offset_right = 235.0
+offset_bottom = 32.0
+text = "K"
+metadata/_edit_use_anchors_ = true
+
+[node name="L" type="Label" parent="Grid Labels"]
+offset_left = 216.0
+offset_top = 9.0
+offset_right = 256.0
+offset_bottom = 32.0
+text = "L"
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -12.0
+offset_right = 19.0
+offset_bottom = 11.0
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -30.0
+offset_right = 19.0
+offset_bottom = -7.0
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -52.0
+offset_right = 19.0
+offset_bottom = -29.0
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -72.0
+offset_right = 19.0
+offset_bottom = -49.0
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -91.0
+offset_right = 19.0
+offset_bottom = -68.0
+text = "5"
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -109.0
+offset_right = 19.0
+offset_bottom = -86.0
+text = "6"
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -131.0
+offset_right = 19.0
+offset_bottom = -108.0
+text = "7"
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Label" parent="Grid Labels"]
+offset_left = -21.0
+offset_top = -151.0
+offset_right = 19.0
+offset_bottom = -128.0
+text = "8"
+metadata/_edit_use_anchors_ = true

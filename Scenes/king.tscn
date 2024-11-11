@@ -10,6 +10,7 @@
 script = ExtResource("1_mpdq4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0, 1)
 position = Vector2(-2.08616e-07, 0)
 scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_gbxff")

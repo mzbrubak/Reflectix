@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=7 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
+[ext_resource type="PackedScene" uid="uid://cn3fhjv74000f" path="res://Scenes/board.tscn" id="2_0yl2j"]
 [ext_resource type="PackedScene" uid="uid://yocbirg225wt" path="res://Scenes/mirror.tscn" id="2_6nsyl"]
 [ext_resource type="PackedScene" uid="uid://db4wpu213jqyc" path="res://Scenes/king.tscn" id="4_kfvhc"]
 [ext_resource type="PackedScene" uid="uid://q1n7pyb7j2wj" path="res://Scenes/ui.tscn" id="5_ctrvt"]
@@ -9,26 +10,29 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nomae")
 
+[node name="Board" parent="." instance=ExtResource("2_0yl2j")]
+position = Vector2(-130, 60)
+
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(6, 6)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 
 [node name="LaserEmitter" parent="Player1Pieces" instance=ExtResource("1_g7mjg")]
-position = Vector2(-62, 37)
+position = Vector2(-130, 60)
 
 [node name="Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
-position = Vector2(31, 37)
+position = Vector2(50, 60)
 rotation = 1.5708
 
 [node name="King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
-position = Vector2(31, -27)
+position = Vector2(50, -80)
 
 [node name="Player2Pieces" type="Node2D" parent="."]
 
 [node name="LaserEmitter" parent="Player2Pieces" instance=ExtResource("1_g7mjg")]
-position = Vector2(-79, -6)
-rotation = 1.5708
+position = Vector2(90, -80)
+rotation = 2.35619
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
 visible = false

@@ -12,6 +12,7 @@ size = Vector2(20, 10)
 script = ExtResource("1_du4aj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0, 0, 1)
 position = Vector2(1.66893e-06, 2.38419e-07)
 scale = Vector2(20, 10)
 texture = SubResource("PlaceholderTexture2D_oqpmt")
@@ -24,6 +25,7 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_huqak")
 
 [node name="Laser" type="RayCast2D" parent="Body"]
+modulate = Color(1, 0, 0, 1)
 position = Vector2(10, 0)
 enabled = false
 target_position = Vector2(1000, 0)

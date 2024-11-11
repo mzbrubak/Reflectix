@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccym58eahoa6n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mlt07"]
+
+[node name="BoardSpace" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.172549, 0.188235, 0.211765, 1)
+position = Vector2(4.76837e-07, -4.76837e-07)
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_mlt07")
