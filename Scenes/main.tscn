@@ -18,10 +18,10 @@ position = Vector2(-62, 37)
 
 [node name="Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(29, 37)
-rotation = 0.785398
+rotation = 3.14159
 scale = Vector2(1, 1)
 
 [node name="King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
-position = Vector2(66, -16)
+position = Vector2(29, -18)
 
 [node name="Player2Pieces" type="Node2D" parent="."]

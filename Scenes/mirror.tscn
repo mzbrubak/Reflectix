@@ -23,8 +23,11 @@ collision_mask = 4
 shape = SubResource("SegmentShape2D_g8scn")
 
 [node name="RayCast2D" type="RayCast2D" parent="MirrorSurface"]
+enabled = false
 
 [node name="OpaqueSurface" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpaqueSurface"]
-polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10)
+polygon = PackedVector2Array(-9, -10, 10, -10, 10, 9)

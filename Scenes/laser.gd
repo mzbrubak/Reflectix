@@ -1,6 +1,7 @@
 extends Node2D
 @export var state=Vector3i(1,0,0)#direction of initial laser propagation
 var state_sprite_dictionary={}#since the state of the sprite and the orientation of the mirror
+var hit_ref
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,10 +10,13 @@ func _ready():
 	await scene_tree.physics_frame
 	await scene_tree.physics_frame
 	print($Body/RayCast2D.is_colliding())
-	stop_laser()
+	hit_ref=$Body/RayCast2D.get_collider()
+	print(hit_ref)
+	pass
+	#stop_laser()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func start_laser():
