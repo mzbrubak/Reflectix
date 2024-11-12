@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn3fhjv74000f"]
+[gd_scene load_steps=6 format=3 uid="uid://cn3fhjv74000f"]
 
 [ext_resource type="PackedScene" uid="uid://ccym58eahoa6n" path="res://Scenes/boardspace.tscn" id="1_sgub3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vxdur"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vusek"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfsoi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d17jn"]
 
 [node name="Board" type="Node2D"]
 position = Vector2(-100, 60)
@@ -503,3 +511,26 @@ offset_right = 19.0
 offset_bottom = -128.0
 text = "8"
 metadata/_edit_use_anchors_ = true
+
+[node name="BoardBoundaries" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 7
+
+[node name="SouthWall" type="CollisionShape2D" parent="BoardBoundaries"]
+position = Vector2(100, 32)
+shape = SubResource("WorldBoundaryShape2D_vxdur")
+
+[node name="NorthWall" type="CollisionShape2D" parent="BoardBoundaries"]
+position = Vector2(100, -167)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_vusek")
+
+[node name="WestWall" type="CollisionShape2D" parent="BoardBoundaries"]
+position = Vector2(-28, -60)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_yfsoi")
+
+[node name="EastWall" type="CollisionShape2D" parent="BoardBoundaries"]
+position = Vector2(240, -60)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_d17jn")

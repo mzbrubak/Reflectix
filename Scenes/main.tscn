@@ -14,6 +14,7 @@ script = ExtResource("1_nomae")
 position = Vector2(-130, 60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6, 6)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 
@@ -39,7 +40,7 @@ position = Vector2(-110, 40)
 rotation = 3.14159
 
 [node name="Mirror5" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
-position = Vector2(90, 40)
+position = Vector2(90, 20)
 rotation = 1.5708
 
 [node name="Player2Pieces" type="Node2D" parent="."]
