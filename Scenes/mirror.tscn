@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
-[ext_resource type="Script" path="res://Scenes/laser.gd" id="2_cc8ty"]
+[ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pn3q1"]
 
@@ -26,12 +26,8 @@ collision_mask = 4
 [node name="Mirror" type="CollisionShape2D" parent="MirrorSurface"]
 shape = SubResource("SegmentShape2D_g8scn")
 
-[node name="Laser" type="RayCast2D" parent="MirrorSurface"]
-modulate = Color(1, 0, 0, 1)
-enabled = false
+[node name="Laser" parent="MirrorSurface" instance=ExtResource("2_054yh")]
 target_position = Vector2(-50, 50)
-collision_mask = 11
-script = ExtResource("2_cc8ty")
 
 [node name="OpaqueSurface" type="StaticBody2D" parent="."]
 collision_layer = 2

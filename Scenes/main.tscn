@@ -14,19 +14,33 @@ script = ExtResource("1_nomae")
 position = Vector2(-130, 60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 
 [node name="LaserEmitter" parent="Player1Pieces" instance=ExtResource("1_g7mjg")]
 position = Vector2(-130, 60)
 
+[node name="King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
+position = Vector2(-30, -79)
+
 [node name="Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(50, 60)
 rotation = 1.5708
 
-[node name="King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
-position = Vector2(50, -80)
+[node name="Mirror2" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
+position = Vector2(50, -40)
+
+[node name="Mirror3" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
+position = Vector2(-110, -40)
+rotation = 4.71239
+
+[node name="Mirror4" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
+position = Vector2(-110, 40)
+rotation = 3.14159
+
+[node name="Mirror5" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
+position = Vector2(90, 40)
+rotation = 1.5708
 
 [node name="Player2Pieces" type="Node2D" parent="."]
 

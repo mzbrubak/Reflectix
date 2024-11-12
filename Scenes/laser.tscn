@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://be6uqcjerdu07"]
+
+[ext_resource type="Script" path="res://Scenes/laser.gd" id="1_66cox"]
+
+[node name="Laser" type="RayCast2D"]
+enabled = false
+collision_mask = 11
+script = ExtResource("1_66cox")
+
+[node name="BeamSegment" type="Line2D" parent="." groups=["BeamSegments"]]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(1, 0, 0, 1)
