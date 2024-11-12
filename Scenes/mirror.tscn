@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=7 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pn3q1"]
+[ext_resource type="Texture2D" uid="uid://dbb7ivubuihek" path="res://img/mirror.png" id="2_w7m7u"]
+[ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_x6vsf"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g8scn"]
 a = Vector2(-10, -10)
@@ -15,10 +15,9 @@ b = Vector2(10, 10)
 script = ExtResource("1_2hn2q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0, 1, 0, 1)
 position = Vector2(7.15256e-07, 0)
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_pn3q1")
+texture = ExtResource("2_w7m7u")
+script = ExtResource("3_x6vsf")
 
 [node name="MirrorSurface" type="StaticBody2D" parent="."]
 collision_mask = 4
