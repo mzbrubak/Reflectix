@@ -3,6 +3,7 @@ extends Node2D
 @onready var P2Laser=$Player2Pieces/LaserEmitter
 @onready var endturn=$UI.end_turn
 @onready var endturn_button=$"UI/VBoxContainer/End Turn"
+@onready var activeplayerUI=$"UI/VBoxContainer/ActivePlayer"
 var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,7 +34,9 @@ func switch_turns():
 		endturn.connect(P2Laser.fire_laser)
 		P2Laser.laser_fired.connect(post_laser_fired)
 		active_player=1
+		activeplayerUI.text="Player 2"
 	elif active_player==1:
 		endturn.connect(P1Laser.fire_laser)
 		P1Laser.laser_fired.connect(post_laser_fired)
 		active_player=0
+		activeplayerUI.text="Player 1"
