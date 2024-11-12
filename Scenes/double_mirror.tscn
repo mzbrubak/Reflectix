@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbqmbe7ngmg3e"]
+[gd_scene load_steps=7 format=3 uid="uid://d1bnj1d6gsewg"]
 
 [ext_resource type="Script" path="res://double_mirror.gd" id="1_x2vvx"]
+[ext_resource type="Texture2D" uid="uid://bct0i1v4umwkd" path="res://img/dmirror.png" id="2_3pavx"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_nysg1"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m0hkw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_n2j3e"]
 a = Vector2(-10, -6)
@@ -22,8 +21,7 @@ script = ExtResource("1_x2vvx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -4.76837e-07)
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_m0hkw")
+texture = ExtResource("2_3pavx")
 
 [node name="MirrorSurface1" type="StaticBody2D" parent="."]
 
