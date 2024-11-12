@@ -7,7 +7,7 @@ enabled = false
 collision_mask = 11
 script = ExtResource("1_66cox")
 
-[node name="BeamSegment" type="Line2D" parent="." groups=["BeamSegments"]]
+[node name="BeamSegment" type="Line2D" parent="."]
 points = PackedVector2Array(0, 0, 0, 0)
 width = 1.0
 default_color = Color(1, 0, 0, 1)

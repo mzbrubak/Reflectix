@@ -3,6 +3,7 @@ extends Node2D
 var state_sprite_dictionary={}#since the state of the sprite and the orientation of the mirror
 var hit_ref
 @onready var laser=$Body/Laser
+signal laser_fired
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -13,6 +14,7 @@ func _process(_delta):
 
 func fire_laser():
 	laser.fire()
+	laser_fired.emit()
 
 func destroy():
 	print("Lol nope")#this piece can't be destroyed

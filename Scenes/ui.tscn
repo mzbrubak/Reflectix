@@ -23,7 +23,7 @@ text = "Undo"
 
 [node name="End Turn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "End Turn (Fire Laser)"
+text = "Fire Laser"
 
 [connection signal="pressed" from="VBoxContainer/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/End Turn" to="." method="_on_end_turn_pressed"]

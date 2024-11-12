@@ -13,6 +13,7 @@ func _process(delta):
 
 func fire():
 	enabled=true
+	add_to_group("BeamSegments")
 	var scene_tree=get_tree()
 	await scene_tree.physics_frame
 	await scene_tree.physics_frame
@@ -22,7 +23,7 @@ func fire():
 		$BeamSegment.points[1]=self.get_collision_point()-self.global_position
 		$BeamSegment.points[1]=$BeamSegment.points[1].rotated(-parent_rotation)
 		var hit_ref=self.get_collider()
-		print(hit_ref)
+		#print(hit_ref)
 		if hit_ref.get_collision_layer_value(2)==true:#if target opaque
 			hit_ref.get_parent().destroy()
 		elif hit_ref.get_collision_layer_value(1)==true:#if target reflective
@@ -42,6 +43,10 @@ func reflect(hit_ref):
 
 func updateandfire(collision_point,direction):#only 2D version for now
 	target_position=direction.rotated(-parent_rotation)#to go from global to local
-	print(target_position)
+	#print(target_position)
 	global_position=collision_point
 	fire()
+
+func turnoff():#called after pressing "End Turn" after firing laser
+	$BeamSegment.points[1]=Vector2(0,0)
+	enabled=false
