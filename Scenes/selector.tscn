@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/selector.gd" id="2_dhy8e"]
 [ext_resource type="Script" path="res://Scenes/selector_sprite_2d.gd" id="3_cir4s"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["selectors"]]
 script = ExtResource("2_dhy8e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
