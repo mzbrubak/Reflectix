@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=8 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
 [ext_resource type="Texture2D" uid="uid://dbb7ivubuihek" path="res://img/mirror.png" id="2_w7m7u"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_x6vsf"]
+[ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="4_wdtwo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g8scn"]
 a = Vector2(-10, -10)
@@ -14,27 +15,30 @@ b = Vector2(10, 10)
 [node name="Mirror" type="Node2D"]
 script = ExtResource("1_2hn2q")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Rotation" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Rotation"]
 position = Vector2(7.15256e-07, 0)
 texture = ExtResource("2_w7m7u")
 script = ExtResource("3_x6vsf")
+selector = ExtResource("4_wdtwo")
 
-[node name="MirrorSurface" type="StaticBody2D" parent="."]
+[node name="MirrorSurface" type="StaticBody2D" parent="Rotation"]
 collision_mask = 4
 
-[node name="Mirror" type="CollisionShape2D" parent="MirrorSurface"]
+[node name="Mirror" type="CollisionShape2D" parent="Rotation/MirrorSurface"]
 shape = SubResource("SegmentShape2D_g8scn")
 
-[node name="Laser" parent="MirrorSurface" instance=ExtResource("2_054yh")]
+[node name="Laser" parent="Rotation/MirrorSurface" instance=ExtResource("2_054yh")]
 target_position = Vector2(-50, 50)
 
-[node name="OpaqueSurface" type="StaticBody2D" parent="."]
+[node name="OpaqueSurface" type="StaticBody2D" parent="Rotation"]
 collision_layer = 2
 collision_mask = 4
 
-[node name="Casing" type="CollisionPolygon2D" parent="OpaqueSurface"]
+[node name="Casing" type="CollisionPolygon2D" parent="Rotation/OpaqueSurface"]
 polygon = PackedVector2Array(-9, -10, 10, -10, 10, 9)
 
-[node name="Rubble" type="CollisionShape2D" parent="OpaqueSurface"]
+[node name="Rubble" type="CollisionShape2D" parent="Rotation/OpaqueSurface"]
 shape = SubResource("RectangleShape2D_qu28f")
 disabled = true
