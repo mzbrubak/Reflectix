@@ -14,7 +14,8 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_pixel_opaque(get_local_mouse_position()):
 			var pos = $"..".position
-			#move_piece.position += pos
+			move_piece.position += pos
+			await get_tree().create_timer(0.01).timeout
 			
 			SignalBus.selection.emit(false)
 			get_tree().call_group("selectors", "queue_free")
