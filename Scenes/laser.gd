@@ -4,7 +4,7 @@ var parent_rotation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	parent_rotation=self.get_parent().get_parent().rotation#needed to correct for direction of raycast being set to local
+	parent_rotation=self.get_parent().get_parent().get_parent().rotation#needed to correct for direction of raycast being set to local
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,7 +25,7 @@ func fire():
 		var hit_ref=self.get_collider()
 		#print(hit_ref)
 		if hit_ref.get_collision_layer_value(2)==true:#if target opaque
-			hit_ref.get_parent().destroy()
+			hit_ref.get_parent().get_parent().destroy()
 		elif hit_ref.get_collision_layer_value(1)==true:#if target reflective
 			reflect(hit_ref)
 	#enabled=false
