@@ -35,6 +35,8 @@ selector = ExtResource("4_wdtwo")
 visible = false
 position = Vector2(7.15256e-07, 0)
 texture = ExtResource("5_xdqjn")
+script = ExtResource("3_x6vsf")
+selector = ExtResource("4_wdtwo")
 
 [node name="OpaqueSurface" type="StaticBody2D" parent="Rotation"]
 collision_layer = 2

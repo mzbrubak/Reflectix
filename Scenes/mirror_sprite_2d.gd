@@ -16,10 +16,11 @@ func _process(delta: float) -> void:
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if is_pixel_opaque(get_local_mouse_position()) and !selecting:
+		if is_pixel_opaque(get_local_mouse_position()) and visible and !selecting:
 			#if $"../..".is_player1 != player1_moving:
 			#	return
-				
+			
+			print(name)
 			SignalBus.selection.emit(true)
 			#TODO make this global to prevent other pieces
 			#left selection
