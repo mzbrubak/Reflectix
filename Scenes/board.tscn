@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn3fhjv74000f"]
+[gd_scene load_steps=9 format=3 uid="uid://cn3fhjv74000f"]
 
 [ext_resource type="PackedScene" uid="uid://ccym58eahoa6n" path="res://Scenes/boardspace.tscn" id="1_sgub3"]
 
@@ -9,6 +9,15 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfsoi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d17jn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36t3u"]
+size = Vector2(239, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiie1"]
+size = Vector2(20, 202)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhxq6"]
+size = Vector2(20, 204)
 
 [node name="Board" type="Node2D"]
 position = Vector2(-100, 60)
@@ -534,3 +543,41 @@ shape = SubResource("WorldBoundaryShape2D_yfsoi")
 position = Vector2(240, -60)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_d17jn")
+
+[node name="SelectorCollisions" type="Node2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="SelectorCollisions"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D"]
+position = Vector2(109.5, 22)
+shape = SubResource("RectangleShape2D_36t3u")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="SelectorCollisions"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D2"]
+position = Vector2(-22, -71)
+shape = SubResource("RectangleShape2D_jiie1")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="SelectorCollisions"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D3"]
+position = Vector2(243, -70)
+shape = SubResource("RectangleShape2D_fhxq6")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="SelectorCollisions"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D4"]
+position = Vector2(110, -163)
+shape = SubResource("RectangleShape2D_36t3u")
