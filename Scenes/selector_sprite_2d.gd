@@ -17,7 +17,6 @@ func _input(event):
 			move_piece.position += pos
 			await get_tree().create_timer(0.01).timeout
 			
-			SignalBus.selection.emit(false)
 			get_tree().call_group("selectors", "queue_free")
 
 

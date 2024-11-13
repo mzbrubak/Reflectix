@@ -19,3 +19,4 @@ func _on_undo_pressed():
 
 func _on_end_turn_pressed():
 	end_turn.emit()
+	SignalBus.selection.emit(false)
