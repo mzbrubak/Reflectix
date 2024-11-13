@@ -69,4 +69,3 @@ func _on_selection(selected):
 
 func _on_player_moving(player_moving):
 	player1_moving = player_moving
-	print(player1_moving)

@@ -23,7 +23,7 @@ zoom = Vector2(5, 5)
 [node name="LaserEmitter" parent="Player1Pieces" instance=ExtResource("1_g7mjg")]
 position = Vector2(-130, 60)
 
-[node name="1King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
+[node name="Red King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
 position = Vector2(-130, -80)
 
 [node name="1Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
@@ -55,7 +55,7 @@ script = ExtResource("8_nj1uy")
 position = Vector2(90, -80)
 rotation = 3.14159
 
-[node name="King" parent="Player2Pieces" instance=ExtResource("4_kfvhc")]
+[node name="Blue King" parent="Player2Pieces" instance=ExtResource("4_kfvhc")]
 position = Vector2(90, 60)
 
 [node name="Mirror" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]

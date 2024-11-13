@@ -42,3 +42,5 @@ func switch_turns():
 		active_player=0
 		activeplayerUI.text="Player 1"
 		SignalBus.is_player1_moving.emit(true)
+		
+	SignalBus.selection.emit(false)
