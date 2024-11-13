@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Node2D
 @export var state=Vector3i(1,0,0)#direction of normal vector of mirror.
 var destroyed=false
 var state_sprite_dictionary={}#since the state of the sprite and the orientation of the mirror
