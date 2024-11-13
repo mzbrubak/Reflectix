@@ -3,10 +3,12 @@ extends Sprite2D
 @export var selector: PackedScene
 
 var selecting = false
+var player1_moving = true;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.selection.connect(_on_selection)
+	SignalBus.is_player1_moving.connect(_on_player_moving)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -15,6 +17,9 @@ func _process(delta: float) -> void:
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_pixel_opaque(get_local_mouse_position()) and !selecting:
+			#if $"../..".is_player1 != player1_moving:
+			#	return
+				
 			SignalBus.selection.emit(true)
 			#TODO make this global to prevent other pieces
 			#left selection
@@ -60,3 +65,6 @@ func _input(event):
 			
 func _on_selection(selected):
 	selecting = selected
+
+func _on_player_moving(player_moving):
+	player1_moving = player_moving

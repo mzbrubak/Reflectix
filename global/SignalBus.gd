@@ -2,6 +2,7 @@ extends Node
 
 signal selection(selected)
 signal piece(piece_node)
+signal is_player1_moving(player_1_moving)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

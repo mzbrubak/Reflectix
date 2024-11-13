@@ -4,6 +4,7 @@ var destroyed=false
 var state_sprite_dictionary={}#since the state of the sprite and the orientation of the mirror
 #map to each other in a 1-to-1 fashion, this keeps track of which sprite corresponds to which state
 
+var is_player1 = true;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,3 +21,13 @@ func destroy():
 	$Rotation/MirrorSurface2/Mirror.set_deferred("disabled",true)
 	$Rotation/OpaqueSurface/Casing.set_deferred("disabled",true)
 	#$OpaqueSurface/Rubble.set_deferred("disabled",false)
+	
+func set_player1():
+	is_player1 = true
+	#$Rotation/Red.visible = true
+	#$Rotation/Blue.visible = false
+
+func set_player2():
+	is_player1 = false
+	#$Rotation/Red.visible = false
+	#$Rotation/Blue.visible = true
