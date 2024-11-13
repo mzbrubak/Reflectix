@@ -17,8 +17,8 @@ func _process(delta: float) -> void:
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_pixel_opaque(get_local_mouse_position()) and visible and !selecting:
-			#if $"../..".is_player1 != player1_moving:
-			#	return
+			if $"../..".is_player1 != player1_moving:
+				return
 			
 			print(name)
 			SignalBus.selection.emit(true)
@@ -69,3 +69,4 @@ func _on_selection(selected):
 
 func _on_player_moving(player_moving):
 	player1_moving = player_moving
+	print(player1_moving)

@@ -35,8 +35,10 @@ func switch_turns():
 		P2Laser.laser_fired.connect(post_laser_fired)
 		active_player=1
 		activeplayerUI.text="Player 2"
+		SignalBus.is_player1_moving.emit(false)
 	elif active_player==1:
 		endturn.connect(P1Laser.fire_laser)
 		P1Laser.laser_fired.connect(post_laser_fired)
 		active_player=0
 		activeplayerUI.text="Player 1"
+		SignalBus.is_player1_moving.emit(true)
