@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkuug16ke60wh"]
+[gd_scene load_steps=8 format=3 uid="uid://dkuug16ke60wh"]
 
 [ext_resource type="Script" path="res://Scenes/laseremitter.gd" id="1_du4aj"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="2_00luf"]
@@ -9,7 +9,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huqak"]
 size = Vector2(20, 10)
 
-[node name="LaserEmitter" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4dm3"]
+size = Vector2(18, 14)
+
+[node name="LaserEmitter" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+gravity_scale = 0.0
 script = ExtResource("1_du4aj")
 
 [node name="Rotation" type="Node2D" parent="."]
@@ -31,3 +37,6 @@ shape = SubResource("RectangleShape2D_huqak")
 
 [node name="Laser" parent="Rotation/Body" instance=ExtResource("2_noqw7")]
 target_position = Vector2(1000, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n4dm3")

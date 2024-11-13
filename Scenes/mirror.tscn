@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=9 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
@@ -12,7 +12,14 @@ b = Vector2(10, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu28f"]
 
-[node name="Mirror" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dvd3"]
+size = Vector2(13, 12)
+
+[node name="Mirror" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 0
+mass = 0.001
+gravity_scale = 0.0
 script = ExtResource("1_2hn2q")
 
 [node name="Rotation" type="Node2D" parent="."]
@@ -42,3 +49,7 @@ polygon = PackedVector2Array(-9, -10, 10, -10, 10, 9)
 [node name="Rubble" type="CollisionShape2D" parent="Rotation/OpaqueSurface"]
 shape = SubResource("RectangleShape2D_qu28f")
 disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_5dvd3")
