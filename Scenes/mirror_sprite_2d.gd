@@ -34,6 +34,27 @@ func _input(event):
 			new_selector4.position.x += 20			
 			add_child(new_selector4)
 			
+			#diagonals
+			var new_selector_diagonal = selector.instantiate()	
+			new_selector_diagonal.position.x -= 20			
+			new_selector_diagonal.position.y -= 20			
+			add_child(new_selector_diagonal)
+			
+			var new_selector_diagonal2 = selector.instantiate()			
+			new_selector_diagonal2.position.x += 20				
+			new_selector_diagonal2.position.y += 20			
+			add_child(new_selector_diagonal2)
+			
+			var new_selector_diagonal3 = selector.instantiate()			
+			new_selector_diagonal3.position.x += 20				
+			new_selector_diagonal3.position.y -= 20			
+			add_child(new_selector_diagonal3)
+			
+			var new_selector_diagonal4 = selector.instantiate()			
+			new_selector_diagonal4.position.x -= 20	
+			new_selector_diagonal4.position.y += 20	
+			add_child(new_selector_diagonal4)
+			
 			#send piece to selectors
 			SignalBus.piece.emit($"..")
 			
