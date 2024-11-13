@@ -16,6 +16,10 @@ func _process(_delta):
 
 func destroy():
 	print("A mirror has been destroyed!")
+	print(name)
 	$Rotation/MirrorSurface/Mirror.set_deferred("disabled",true)
 	$Rotation/OpaqueSurface/Casing.set_deferred("disabled",true)
-	#$OpaqueSurface/Rubble.set_deferred("disabled",false)
+	#$OpaqueSurface/Rubble.set_deferred("disabled",false)	
+	$Rotation/Sprite2D.visible = false
+	$Rotation/OpaqueSurface/Rubble/Sprite2D.visible = true
+	z_index = 1

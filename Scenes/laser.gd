@@ -12,6 +12,7 @@ func _process(delta):
 	pass
 
 func fire():
+	z_index=100;
 	enabled=true
 	add_to_group("BeamSegments")
 	var scene_tree=get_tree()

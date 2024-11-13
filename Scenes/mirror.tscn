@@ -1,19 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=10 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
 [ext_resource type="Texture2D" uid="uid://dbb7ivubuihek" path="res://img/mirror.png" id="2_w7m7u"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_x6vsf"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="4_wdtwo"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_g8scn"]
-a = Vector2(-10, -10)
-b = Vector2(10, 10)
+[ext_resource type="Texture2D" uid="uid://dvqaq2qvllsmf" path="res://img/rubble.png" id="6_r2oc5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu28f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5dvd3"]
 size = Vector2(13, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_g8scn"]
+a = Vector2(-10, -10)
+b = Vector2(10, 10)
 
 [node name="Mirror" type="Node2D"]
 script = ExtResource("1_2hn2q")
@@ -29,15 +30,6 @@ texture = ExtResource("2_w7m7u")
 script = ExtResource("3_x6vsf")
 selector = ExtResource("4_wdtwo")
 
-[node name="MirrorSurface" type="StaticBody2D" parent="Rotation"]
-collision_mask = 4
-
-[node name="Mirror" type="CollisionShape2D" parent="Rotation/MirrorSurface"]
-shape = SubResource("SegmentShape2D_g8scn")
-
-[node name="Laser" parent="Rotation/MirrorSurface" instance=ExtResource("2_054yh")]
-target_position = Vector2(-50, 50)
-
 [node name="OpaqueSurface" type="StaticBody2D" parent="Rotation"]
 collision_layer = 2
 collision_mask = 4
@@ -49,6 +41,20 @@ polygon = PackedVector2Array(-9, -10, 10, -10, 10, 9)
 shape = SubResource("RectangleShape2D_qu28f")
 disabled = true
 
+[node name="Sprite2D" type="Sprite2D" parent="Rotation/OpaqueSurface/Rubble"]
+visible = false
+texture = ExtResource("6_r2oc5")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rotation"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_5dvd3")
+
+[node name="MirrorSurface" type="StaticBody2D" parent="Rotation"]
+collision_mask = 4
+
+[node name="Mirror" type="CollisionShape2D" parent="Rotation/MirrorSurface"]
+shape = SubResource("SegmentShape2D_g8scn")
+
+[node name="Laser" parent="Rotation/MirrorSurface" instance=ExtResource("2_054yh")]
+visibility_layer = 15
+target_position = Vector2(-50, 50)
