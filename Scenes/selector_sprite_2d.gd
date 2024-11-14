@@ -20,7 +20,8 @@ func _input(event):
 			await get_tree().create_timer(0.01).timeout
 			
 			get_tree().call_group("selectors", "queue_free")
-			SignalBus.move_made.emit(true)
+			SignalBus.move_made.emit(true)			
+			SignalBus.rotation_selection.emit(false)
 			SignalBus.undo_disabled.emit(false)
 
 

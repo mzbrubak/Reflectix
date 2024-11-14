@@ -22,6 +22,7 @@ func _input(event):
 				return
 			
 			SignalBus.selection.emit(true)
+			SignalBus.rotation_selection.emit(true)
 			#TODO make this global to prevent other pieces
 			#left selection
 			var new_selector = selector.instantiate()			

@@ -1,6 +1,7 @@
 extends Node
 
 signal selection(selected)
+signal rotation_selection(selected)
 signal piece(piece_node)
 signal is_player1_moving(player_1_moving)
 signal query_piece_rotation(piece_node)#goal: when selecting a piece, get its rotation and z state and send to UI
