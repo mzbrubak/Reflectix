@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=9 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
 [ext_resource type="Texture2D" uid="uid://bndd2jsyordbq" path="res://Art Assets/Mirrors-export.png" id="2_uly1i"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_x6vsf"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="4_wdtwo"]
-[ext_resource type="Texture2D" uid="uid://dvqaq2qvllsmf" path="res://img/rubble.png" id="6_r2oc5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu28f"]
 
@@ -60,9 +59,23 @@ polygon = PackedVector2Array(-9, -10, 10, -10, 10, 9)
 shape = SubResource("RectangleShape2D_qu28f")
 disabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Rotation/OpaqueSurface/Rubble"]
+[node name="RedRubble" type="Sprite2D" parent="Rotation/OpaqueSurface/Rubble"]
 visible = false
-texture = ExtResource("6_r2oc5")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_uly1i")
+flip_v = true
+hframes = 8
+vframes = 2
+frame = 13
+
+[node name="BlueRubble" type="Sprite2D" parent="Rotation/OpaqueSurface/Rubble"]
+visible = false
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_uly1i")
+flip_v = true
+hframes = 8
+vframes = 2
+frame = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rotation"]
 position = Vector2(0.5, 0)
