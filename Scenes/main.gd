@@ -4,7 +4,6 @@ extends Node2D
 @onready var endturn=$UI.end_turn
 @onready var endturn_button=$"UI/VBoxContainer/End Turn"
 @onready var activeplayerUI=$"UI/VBoxContainer/ActivePlayer"
-@onready var undo_button=$"UI/VBoxContainer/Undo"
 var move_made=false
 var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
@@ -21,8 +20,10 @@ func _process(_delta):
 func on_move_made(move):
 	endturn_button.disabled=!move#disabled if move not yet made
 	SignalBus.has_move_been_made=move
+	SignalBus.undo_disabled.emit(true)
 
 func post_laser_fired():
+	SignalBus.undo_disabled.emit(true)
 	if active_player==0:
 		endturn.disconnect(P1Laser.fire_laser)
 		P1Laser.laser_fired.disconnect(post_laser_fired)

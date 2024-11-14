@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn3fhjv74000f"]
+[gd_scene load_steps=10 format=3 uid="uid://cn3fhjv74000f"]
 
 [ext_resource type="PackedScene" uid="uid://ccym58eahoa6n" path="res://Scenes/boardspace.tscn" id="1_sgub3"]
+[ext_resource type="FontFile" uid="uid://cybpab1vbk3w" path="res://fonts/Oswald/Oswald-VariableFont_wght.ttf" id="2_pt44n"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vxdur"]
 
@@ -360,6 +361,7 @@ position = Vector2(220, -120)
 position = Vector2(220, -140)
 
 [node name="Grid Labels" type="Node2D" parent="."]
+visible = false
 
 [node name="A" type="Label" parent="Grid Labels"]
 offset_left = -5.0
@@ -367,7 +369,6 @@ offset_top = 9.0
 offset_right = 35.0
 offset_bottom = 32.0
 text = "A"
-metadata/_edit_use_anchors_ = true
 
 [node name="B" type="Label" parent="Grid Labels"]
 offset_left = 14.0
@@ -513,12 +514,230 @@ offset_bottom = -108.0
 text = "7"
 metadata/_edit_use_anchors_ = true
 
-[node name="8" type="Label" parent="Grid Labels"]
-offset_left = -21.0
-offset_top = -151.0
-offset_right = 19.0
-offset_bottom = -128.0
+[node name="Grid Hi-Res" type="Node2D" parent="."]
+
+[node name="1" type="Label" parent="Grid Hi-Res"]
+offset_left = -19.0
+offset_top = -12.0
+offset_right = 59.0
+offset_bottom = 221.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "1"
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -32.0
+offset_right = 58.0
+offset_bottom = 201.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "2"
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -52.0
+offset_right = 58.0
+offset_bottom = 181.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "3"
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -72.0
+offset_right = 58.0
+offset_bottom = 161.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -92.0
+offset_right = 58.0
+offset_bottom = 141.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "5"
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -112.0
+offset_right = 58.0
+offset_bottom = 121.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "6"
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Label" parent="Grid Hi-Res"]
+offset_left = -19.0
+offset_top = -132.0
+offset_right = 59.0
+offset_bottom = 101.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "7"
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Label" parent="Grid Hi-Res"]
+offset_left = -20.0
+offset_top = -152.0
+offset_right = 58.0
+offset_bottom = 81.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
 text = "8"
+metadata/_edit_use_anchors_ = true
+
+[node name="A" type="Label" parent="Grid Hi-Res"]
+offset_left = -3.0
+offset_top = 6.0
+offset_right = 75.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "A"
+metadata/_edit_use_anchors_ = true
+
+[node name="B" type="Label" parent="Grid Hi-Res"]
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 98.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "B"
+metadata/_edit_use_anchors_ = true
+
+[node name="C" type="Label" parent="Grid Hi-Res"]
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 116.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "C"
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Label" parent="Grid Hi-Res"]
+offset_left = 56.0
+offset_top = 6.0
+offset_right = 138.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "D"
+metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Label" parent="Grid Hi-Res"]
+offset_left = 75.9999
+offset_top = 6.0
+offset_right = 154.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "E"
+metadata/_edit_use_anchors_ = true
+
+[node name="F" type="Label" parent="Grid Hi-Res"]
+offset_left = 97.0
+offset_top = 6.0
+offset_right = 175.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "F"
+metadata/_edit_use_anchors_ = true
+
+[node name="G" type="Label" parent="Grid Hi-Res"]
+offset_left = 116.0
+offset_top = 6.0
+offset_right = 199.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "G"
+metadata/_edit_use_anchors_ = true
+
+[node name="H" type="Label" parent="Grid Hi-Res"]
+offset_left = 136.0
+offset_top = 6.0
+offset_right = 224.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Label" parent="Grid Hi-Res"]
+offset_left = 158.0
+offset_top = 6.0
+offset_right = 236.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "I
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Label" parent="Grid Hi-Res"]
+offset_left = 178.0
+offset_top = 6.0
+offset_right = 256.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "J
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="K" type="Label" parent="Grid Hi-Res"]
+offset_left = 196.0
+offset_top = 6.0
+offset_right = 274.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "K
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="J3" type="Label" parent="Grid Hi-Res"]
+offset_left = 218.0
+offset_top = 6.0
+offset_right = 296.0
+offset_bottom = 239.0
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("2_pt44n")
+theme_override_font_sizes/font_size = 156
+text = "L
+"
 metadata/_edit_use_anchors_ = true
 
 [node name="BoardBoundaries" type="StaticBody2D" parent="."]

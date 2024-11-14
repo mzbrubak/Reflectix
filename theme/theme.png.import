@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvqaq2qvllsmf"
-path="res://.godot/imported/rubble.png-391c5b78446ed0506e84e203d071155c.ctex"
+uid="uid://cxp11ivlusbtt"
+path="res://.godot/imported/theme.png-71ff4359022a166b45410f2aeca3014c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/rubble.png"
-dest_files=["res://.godot/imported/rubble.png-391c5b78446ed0506e84e203d071155c.ctex"]
+source_file="res://theme/theme.png"
+dest_files=["res://.godot/imported/theme.png-71ff4359022a166b45410f2aeca3014c.ctex"]
 
 [params]
 

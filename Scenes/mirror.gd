@@ -21,16 +21,23 @@ func destroy():
 	#$OpaqueSurface/Rubble.set_deferred("disabled",false)	
 	$Rotation/Red.visible = false
 	$Rotation/Blue.visible = false
-	$Rotation/OpaqueSurface/Rubble/Sprite2D.visible = true
+	if (is_player1):
+		$Rotation/OpaqueSurface/Rubble/RedRubble.visible = true
+	else:
+		$Rotation/OpaqueSurface/Rubble/BlueRubble.visible = true
 	$Rotation/CollisionShape2D.visible = false
-	z_index = 1
+	$Rotation.collision_mask = 0
+	$Rotation.collision_layer = 0
+	z_index = 0
 	
 func set_player1():
+	z_index = 100
 	is_player1 = true
 	$Rotation/Red.visible = true
 	$Rotation/Blue.visible = false
 
 func set_player2():
+	z_index = 100
 	is_player1 = false
 	$Rotation/Red.visible = false
 	$Rotation/Blue.visible = true
