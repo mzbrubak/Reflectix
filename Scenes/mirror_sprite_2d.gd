@@ -1,6 +1,7 @@
 extends Sprite2D
 
 @export var selector: PackedScene
+@onready var mirror = $".."
 
 var selecting = false
 var player1_moving = true;
@@ -24,41 +25,41 @@ func _input(event):
 			#TODO make this global to prevent other pieces
 			#left selection
 			var new_selector = selector.instantiate()			
-			new_selector.position.x -= 20			
-			add_child(new_selector)
+			new_selector.position.x -= 20						
+			mirror.add_child(new_selector)
 			#bottom selection
 			var new_selector2 = selector.instantiate()			
 			new_selector2.position.y -= 20			
-			add_child(new_selector2)
+			mirror.add_child(new_selector2)
 			#top selection
 			var new_selector3 = selector.instantiate()			
 			new_selector3.position.y += 20			
-			add_child(new_selector3)
+			mirror.add_child(new_selector3)
 			#right selection
 			var new_selector4 = selector.instantiate()			
 			new_selector4.position.x += 20			
-			add_child(new_selector4)
+			mirror.add_child(new_selector4)
 			
 			#diagonals
 			var new_selector_diagonal = selector.instantiate()	
 			new_selector_diagonal.position.x -= 20			
 			new_selector_diagonal.position.y -= 20			
-			add_child(new_selector_diagonal)
+			mirror.add_child(new_selector_diagonal)
 			
 			var new_selector_diagonal2 = selector.instantiate()			
 			new_selector_diagonal2.position.x += 20				
 			new_selector_diagonal2.position.y += 20			
-			add_child(new_selector_diagonal2)
+			mirror.add_child(new_selector_diagonal2)
 			
 			var new_selector_diagonal3 = selector.instantiate()			
 			new_selector_diagonal3.position.x += 20				
 			new_selector_diagonal3.position.y -= 20			
-			add_child(new_selector_diagonal3)
+			mirror.add_child(new_selector_diagonal3)
 			
 			var new_selector_diagonal4 = selector.instantiate()			
 			new_selector_diagonal4.position.x -= 20	
 			new_selector_diagonal4.position.y += 20	
-			add_child(new_selector_diagonal4)
+			mirror.add_child(new_selector_diagonal4)
 			
 			#send piece to selectors
 			SignalBus.piece.emit($"..")
