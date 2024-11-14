@@ -4,17 +4,22 @@ extends Node2D
 @onready var endturn=$UI.end_turn
 @onready var endturn_button=$"UI/VBoxContainer/End Turn"
 @onready var activeplayerUI=$"UI/VBoxContainer/ActivePlayer"
+@onready var undo_button=$"UI/VBoxContainer/Undo"
+var move_made=false
 var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$UI.visible=true#so I can hide it in editor
 	endturn.connect(P1Laser.fire_laser)
 	P1Laser.laser_fired.connect(post_laser_fired)
-
+	SignalBus.move_made.connect(on_move_made)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+func on_move_made(move):
+	endturn_button.disabled=!move#disabled if move not yet made
 
 func post_laser_fired():
 	if active_player==0:
@@ -25,6 +30,7 @@ func post_laser_fired():
 		P2Laser.laser_fired.disconnect(post_laser_fired)
 	endturn.connect(switch_turns)
 	endturn_button.text="End Turn"
+	SignalBus.selection.emit(false)
 
 func switch_turns():
 	endturn.disconnect(switch_turns)
@@ -42,6 +48,7 @@ func switch_turns():
 		active_player=0
 		activeplayerUI.text="Player 1"
 		SignalBus.is_player1_moving.emit(true)
-		SignalBus.piece.emit(null)
+	SignalBus.piece.emit(null)
+	SignalBus.move_made.emit(false)
 		
-	SignalBus.selection.emit(false)
+	

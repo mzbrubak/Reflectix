@@ -5,6 +5,7 @@ signal piece(piece_node)
 signal is_player1_moving(player_1_moving)
 signal query_piece_rotation(piece_node)#goal: when selecting a piece, get its rotation and z state and send to UI
 signal set_piece_rotation(newstate)#goal: when pressing a button in rotation UI, update rotation and z state of piece accordingly
+signal move_made(move:bool)
 
 var piece_location = null
 

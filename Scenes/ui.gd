@@ -19,6 +19,7 @@ func _on_undo_pressed():
 		print("undo")
 		move_piece.position = SignalBus.piece_location
 		SignalBus.selection.emit(false)
+		SignalBus.move_made.emit(false)
 
 
 func _on_end_turn_pressed():

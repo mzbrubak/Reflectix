@@ -63,9 +63,10 @@ func _input(event):
 			
 			#send piece to selectors
 			SignalBus.piece.emit($"..")
-			
+			print($"..")
 func _on_selection(selected):
 	selecting = selected
+	print(self,"selected=",selecting)
 
 func _on_player_moving(player_moving):
 	player1_moving = player_moving

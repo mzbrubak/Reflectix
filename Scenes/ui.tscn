@@ -30,6 +30,7 @@ text = "Undo"
 
 [node name="End Turn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Fire Laser"
 
 [node name="RotationUI" parent="." instance=ExtResource("2_rl77h")]
