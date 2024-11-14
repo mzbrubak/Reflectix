@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1bnj1d6gsewg"]
 
 [ext_resource type="Script" path="res://Scenes/double_mirror.gd" id="1_x2vvx"]
-[ext_resource type="Texture2D" uid="uid://bct0i1v4umwkd" path="res://img/dmirror.png" id="2_3pavx"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_nysg1"]
+[ext_resource type="Texture2D" uid="uid://bndd2jsyordbq" path="res://Art Assets/Mirrors-export.png" id="2_yx33k"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_vmr8s"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="4_yrhnj"]
 
@@ -25,7 +25,11 @@ script = ExtResource("1_x2vvx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Rotation"]
 position = Vector2(0, -4.76837e-07)
-texture = ExtResource("2_3pavx")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_yx33k")
+hframes = 8
+vframes = 2
+frame = 6
 script = ExtResource("3_vmr8s")
 selector = ExtResource("4_yrhnj")
 
