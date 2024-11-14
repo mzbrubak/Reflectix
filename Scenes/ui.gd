@@ -16,11 +16,10 @@ func _process(_delta):
 
 func _on_undo_pressed():
 	if SignalBus.piece_location != null && move_piece != null:
-		print("undo")
 		move_piece.position = SignalBus.piece_location
+		SignalBus.piece_location = null
 		SignalBus.selection.emit(false)
 		SignalBus.move_made.emit(false)
-
 
 func _on_end_turn_pressed():
 	end_turn.emit()

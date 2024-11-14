@@ -20,7 +20,6 @@ func _input(event):
 			if $"../..".is_player1 != player1_moving:
 				return
 			
-			print(name)
 			SignalBus.selection.emit(true)
 			#TODO make this global to prevent other pieces
 			#left selection
