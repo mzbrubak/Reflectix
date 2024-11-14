@@ -10,16 +10,6 @@ offset = Vector2(-282, -69)
 transform = Transform2D(1, 0, 0, 1, -282, -69)
 script = ExtResource("1_7jko1")
 
-[node name="ActivePlayer" type="Label" parent="."]
-offset_left = 1757.0
-offset_top = 476.5
-offset_right = 1924.0
-offset_bottom = 535.5
-theme_override_fonts/font = ExtResource("2_g1ayi")
-theme_override_font_sizes/font_size = 46
-text = "Player 1
-"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 6
 anchor_left = 1.0
@@ -32,6 +22,13 @@ offset_right = 3.0
 offset_bottom = 101.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="ActivePlayer" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g1ayi")
+theme_override_font_sizes/font_size = 46
+text = "Player 1
+"
 
 [node name="Undo" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -47,7 +44,7 @@ disabled = true
 text = "Fire Laser"
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(1, 27)
+position = Vector2(2, 83)
 
 [node name="RotationUI" parent="Node2D" instance=ExtResource("2_rl77h")]
 custom_minimum_size = Vector2(64, 64)
