@@ -9,6 +9,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body) -> void:
-	print ("-body:"+body.name)
+	#print ("-body:"+body.name)
 	if (body.visible):
 		queue_free()
