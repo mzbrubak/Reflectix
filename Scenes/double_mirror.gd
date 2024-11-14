@@ -8,7 +8,8 @@ var is_player1 = true;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	rotation=0
+	set_rotation_from_state(state)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,3 +32,43 @@ func set_player2():
 	is_player1 = false
 	$Rotation/Red.visible = false
 	$Rotation/Blue.visible = true
+
+func set_rotation_from_state(rotationstate):
+	match rotationstate:
+		#First the 2D states
+		Vector3i(-1,-1,0):
+			$Rotation.rotation=0
+		Vector3i(-1,0,0):
+			$Rotation.rotation=PI/4
+		Vector3i(-1,1,0):
+			$Rotation.rotation=PI/2
+		Vector3i(0,1,0):
+			$Rotation.rotation=3*PI/4
+		Vector3i(1,1,0):
+			$Rotation.rotation=PI
+		Vector3i(1,0,0):
+			$Rotation.rotation=5*PI/4
+		Vector3i(1,-1,0):
+			$Rotation.rotation=3*PI/2
+		Vector3i(0,-1,0):
+			$Rotation.rotation=7*PI/4
+		#Then the 3D states
+		Vector3i(-1,-1,1):
+			$Rotation.rotation=0
+		Vector3i(-1,0,1):
+			$Rotation.rotation=PI/4
+		Vector3i(-1,1,1):
+			$Rotation.rotation=PI/2
+		Vector3i(0,1,1):
+			$Rotation.rotation=3*PI/4
+		Vector3i(1,1,1):
+			$Rotation.rotation=PI
+		Vector3i(1,0,1):
+			$Rotation.rotation=5*PI/4
+		Vector3i(1,-1,1):
+			$Rotation.rotation=3*PI/2
+		Vector3i(0,-1,1):
+			$Rotation.rotation=7*PI/4
+		Vector3i(0,0,1):
+			pass#swap sprite
+			$Rotation.rotation=0

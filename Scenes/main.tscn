@@ -32,24 +32,30 @@ position = Vector2(-165, -102)
 [node name="1Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(50, 60)
 rotation = 1.5708
+state = Vector3i(-1, 1, 0)
 
 [node name="1Mirror2" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(50, -40)
+state = Vector3i(-1, -1, 0)
 
 [node name="1Mirror3" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-110, -40)
 rotation = 4.71239
+state = Vector3i(1, -1, 0)
 
 [node name="1Mirror4" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-110, 40)
 rotation = 3.14159
+state = Vector3i(1, 1, 0)
 
 [node name="1Mirror5" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(30, 40)
 rotation = 1.5708
+state = Vector3i(-1, 1, 0)
 
 [node name="1DoubleMirror" parent="Player1Pieces" instance=ExtResource("6_krj5m")]
 position = Vector2(-30, -20)
+state = Vector3i(-1, -1, 0)
 
 [node name="Player2Pieces" type="Node2D" parent="."]
 script = ExtResource("8_nj1uy")
@@ -57,6 +63,7 @@ script = ExtResource("8_nj1uy")
 [node name="LaserEmitter" parent="Player2Pieces" instance=ExtResource("1_g7mjg")]
 position = Vector2(90, -80)
 rotation = 3.14159
+state = Vector3i(-1, 0, 0)
 
 [node name="Blue King" parent="Player2Pieces" instance=ExtResource("4_kfvhc")]
 visible = false
@@ -65,24 +72,30 @@ position = Vector2(119, 88)
 [node name="Mirror" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-90, -80)
 rotation = 4.71239
+state = Vector3i(1, -1, 0)
 
 [node name="Mirror2" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-90, 20)
 rotation = 3.14159
+state = Vector3i(1, 1, 0)
 
 [node name="Mirror3" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(70, 20)
 rotation = 1.5708
+state = Vector3i(-1, 1, 0)
 
 [node name="Mirror4" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(70, -60)
+state = Vector3i(-1, -1, 0)
 
 [node name="Mirror5" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-70, -60)
 rotation = 4.71239
+state = Vector3i(1, -1, 0)
 
 [node name="DoubleMirror" parent="Player2Pieces" instance=ExtResource("6_krj5m")]
 position = Vector2(-10, 0)
+state = Vector3i(1, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
 visible = false
