@@ -20,6 +20,7 @@ func _process(_delta):
 
 func on_move_made(move):
 	endturn_button.disabled=!move#disabled if move not yet made
+	SignalBus.has_move_been_made=move
 
 func post_laser_fired():
 	if active_player==0:

@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if is_pixel_opaque(get_local_mouse_position()) and visible and !selecting:
+		if is_pixel_opaque(get_local_mouse_position()) and visible and !SignalBus.has_move_been_made and !selecting:
 			if $"../..".is_player1 != player1_moving:
 				return
 			

@@ -8,6 +8,7 @@ signal set_piece_rotation(newstate)#goal: when pressing a button in rotation UI,
 signal move_made(move:bool)
 
 var piece_location = null
+var has_move_been_made:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
