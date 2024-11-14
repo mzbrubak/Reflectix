@@ -26,8 +26,11 @@ func set_player1():
 	is_player1 = true
 	#$Rotation/Red.visible = true
 	#$Rotation/Blue.visible = false
-
+	#$Rotation/Body/Laser.mesh.material.albedo_color = Color(255,0,0,0)
 func set_player2():
 	is_player1 = false
 	#$Rotation/Red.visible = false
+	$Rotation/BlueLaser.visible = true
+	$Rotation/RedLaser.visible = false
 	#$Rotation/Blue.visible = true
+	#$Rotation/Body/Laser.mesh.material.albedo_color = Color(0,0,255,0)

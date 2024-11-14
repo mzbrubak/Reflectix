@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkuug16ke60wh"]
+[gd_scene load_steps=9 format=3 uid="uid://dkuug16ke60wh"]
 
 [ext_resource type="Script" path="res://Scenes/laseremitter.gd" id="1_du4aj"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="2_00luf"]
 [ext_resource type="Texture2D" uid="uid://cu0b16b2q4f4m" path="res://img/emitter_placeholder.png" id="2_g4yev"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_noqw7"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="3_pk3ki"]
+[ext_resource type="Texture2D" uid="uid://lngqa5g2ptm1" path="res://img/emitter_placeholder-blue.png" id="5_2h4y8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huqak"]
 size = Vector2(20, 10)
@@ -20,11 +21,19 @@ script = ExtResource("1_du4aj")
 
 [node name="Rotation" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Rotation"]
+[node name="RedLaser" type="Sprite2D" parent="Rotation"]
 self_modulate = Color(1, 0, 0, 1)
 position = Vector2(4.76837e-07, 0)
 scale = Vector2(1, 0.5)
 texture = ExtResource("2_g4yev")
+script = ExtResource("2_00luf")
+selector = ExtResource("3_pk3ki")
+
+[node name="BlueLaser" type="Sprite2D" parent="Rotation"]
+visible = false
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(1, 0.5)
+texture = ExtResource("5_2h4y8")
 script = ExtResource("2_00luf")
 selector = ExtResource("3_pk3ki")
 
