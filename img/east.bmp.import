@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cjcv5kck148uc"
+path="res://.godot/imported/east.bmp-184fbe402a30cf07e9b509e1a1a30207.res"
+
+[deps]
+
+source_file="res://img/east.bmp"
+dest_files=["res://.godot/imported/east.bmp-184fbe402a30cf07e9b509e1a1a30207.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

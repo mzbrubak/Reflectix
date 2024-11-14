@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bstvl6c85tche"
+path="res://.godot/imported/up.bmp-ecd7ab82d86d0153bf12f54c910210c9.res"
+
+[deps]
+
+source_file="res://img/up.bmp"
+dest_files=["res://.godot/imported/up.bmp-ecd7ab82d86d0153bf12f54c910210c9.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

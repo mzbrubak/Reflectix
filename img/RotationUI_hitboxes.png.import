@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bq56sndry0hv6"
+path="res://.godot/imported/RotationUI_hitboxes.png-5896db547694695be2fc49dd3f63a574.res"
+
+[deps]
+
+source_file="res://img/RotationUI_hitboxes.png"
+dest_files=["res://.godot/imported/RotationUI_hitboxes.png-5896db547694695be2fc49dd3f63a574.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

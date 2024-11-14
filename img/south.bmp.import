@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c2vavacjrmsov"
+path="res://.godot/imported/south.bmp-f2c51170f76da048bc3618160197228a.res"
+
+[deps]
+
+source_file="res://img/south.bmp"
+dest_files=["res://.godot/imported/south.bmp-f2c51170f76da048bc3618160197228a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

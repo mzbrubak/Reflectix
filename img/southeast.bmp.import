@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://w4jrljxjw0sb"
+path="res://.godot/imported/southeast.bmp-477bef2e811a2442458c5e8eea87d8d5.res"
+
+[deps]
+
+source_file="res://img/southeast.bmp"
+dest_files=["res://.godot/imported/southeast.bmp-477bef2e811a2442458c5e8eea87d8d5.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

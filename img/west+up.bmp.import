@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ighcd664i80v"
+path="res://.godot/imported/west+up.bmp-85be3cc84a20ec9f7b4b133f2a2c1347.res"
+
+[deps]
+
+source_file="res://img/west+up.bmp"
+dest_files=["res://.godot/imported/west+up.bmp-85be3cc84a20ec9f7b4b133f2a2c1347.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

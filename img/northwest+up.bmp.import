@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://d4l2nsryky7hv"
+path="res://.godot/imported/northwest+up.bmp-fd7f4c353e1689a2421fa3418d357552.res"
+
+[deps]
+
+source_file="res://img/northwest+up.bmp"
+dest_files=["res://.godot/imported/northwest+up.bmp-fd7f4c353e1689a2421fa3418d357552.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

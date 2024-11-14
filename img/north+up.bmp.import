@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://jvn563loyc3i"
+path="res://.godot/imported/north+up.bmp-92a57186361367b1558d2f7bc147de1a.res"
+
+[deps]
+
+source_file="res://img/north+up.bmp"
+dest_files=["res://.godot/imported/north+up.bmp-92a57186361367b1558d2f7bc147de1a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

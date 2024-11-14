@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bc6qs6jgjreb0"
+path="res://.godot/imported/north.bmp-98cf10b59465c68770c696cdaf96df8d.res"
+
+[deps]
+
+source_file="res://img/north.bmp"
+dest_files=["res://.godot/imported/north.bmp-98cf10b59465c68770c696cdaf96df8d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
