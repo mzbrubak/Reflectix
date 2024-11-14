@@ -23,13 +23,23 @@ script = ExtResource("1_x2vvx")
 
 [node name="Rotation" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Rotation"]
-position = Vector2(0, -4.76837e-07)
+[node name="Red" type="Sprite2D" parent="Rotation"]
+position = Vector2(0, -1)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_yx33k")
 hframes = 8
 vframes = 2
 frame = 6
+script = ExtResource("3_vmr8s")
+selector = ExtResource("4_yrhnj")
+
+[node name="Blue" type="Sprite2D" parent="Rotation"]
+position = Vector2(0, -1)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_yx33k")
+hframes = 8
+vframes = 2
+frame = 2
 script = ExtResource("3_vmr8s")
 selector = ExtResource("4_yrhnj")
 

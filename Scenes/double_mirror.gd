@@ -24,10 +24,10 @@ func destroy():
 	
 func set_player1():
 	is_player1 = true
-	#$Rotation/Red.visible = true
-	#$Rotation/Blue.visible = false
+	$Rotation/Red.visible = true
+	$Rotation/Blue.visible = false
 
 func set_player2():
 	is_player1 = false
-	#$Rotation/Red.visible = false
-	#$Rotation/Blue.visible = true
+	$Rotation/Red.visible = false
+	$Rotation/Blue.visible = true
