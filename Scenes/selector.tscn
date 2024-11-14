@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://twyd70pvvlew"]
 
-[ext_resource type="Texture2D" uid="uid://ckq7nkjs36ln4" path="res://img/select.png" id="1_j5r05"]
+[ext_resource type="Texture2D" uid="uid://m8ergxosolvi" path="res://img/select-white.png" id="2_7m152"]
 [ext_resource type="Script" path="res://Scenes/selector.gd" id="2_dhy8e"]
 [ext_resource type="Script" path="res://Scenes/selector_sprite_2d.gd" id="3_cir4s"]
 
@@ -12,7 +12,8 @@ collision_mask = 16
 script = ExtResource("2_dhy8e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_j5r05")
+modulate = Color(1, 1, 1, 0.560784)
+texture = ExtResource("2_7m152")
 script = ExtResource("3_cir4s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
