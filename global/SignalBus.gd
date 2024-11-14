@@ -11,6 +11,7 @@ signal undo_disabled(disabled)
 
 var piece_location = null
 var has_move_been_made:bool = false
+var piece_rotation_state=null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
