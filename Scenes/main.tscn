@@ -131,9 +131,9 @@ theme_override_font_sizes/font_size = 68
 text = "A strategy laser chess game"
 
 [node name="Credits" type="Label" parent="Splash/Credits"]
-offset_left = 217.0
+offset_left = 180.0
 offset_top = 283.0
-offset_right = 622.0
+offset_right = 585.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
@@ -151,28 +151,28 @@ NathanSDunn
 PurpleHues"
 
 [node name="Assets" type="Label" parent="Splash/Credits"]
-offset_left = 1093.0
+offset_left = 1117.0
 offset_top = 283.0
-offset_right = 1498.0
+offset_right = 1522.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
 text = "Assets"
 
 [node name="Assets Names" type="Label" parent="Splash/Credits"]
-offset_left = 893.0
-offset_top = 428.0
-offset_right = 1833.0
-offset_bottom = 1076.0
+offset_left = 758.0
+offset_top = 432.0
+offset_right = 1841.0
+offset_bottom = 1080.0
 theme_override_fonts/font = ExtResource("16_874sp")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 43
 text = "Royalty Free Sound:
-Laser
+https://pixabay.com/sound-effects/laser-zap-90575/
 Explosion
 Game Over
 
 Fonts: 
-Oswald, Lato, Sedgwich(OFL)"
+Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display (OFL)"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
 

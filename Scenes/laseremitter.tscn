@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkuug16ke60wh"]
+[gd_scene load_steps=9 format=3 uid="uid://dkuug16ke60wh"]
 
 [ext_resource type="Script" path="res://Scenes/laseremitter.gd" id="1_du4aj"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="2_00luf"]
 [ext_resource type="Texture2D" uid="uid://78w0r6mdofcs" path="res://Art Assets/Gun1.png" id="2_8vje8"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_noqw7"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="3_pk3ki"]
+[ext_resource type="AudioStream" uid="uid://chglxii5urjut" path="res://sfx/laser-zap-90575.mp3" id="6_vv2gb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huqak"]
 size = Vector2(16, 10)
@@ -52,3 +53,6 @@ target_position = Vector2(1000, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n4dm3")
+
+[node name="Zap" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vv2gb")

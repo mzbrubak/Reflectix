@@ -18,9 +18,10 @@ func _process(_delta):
 	pass
 
 func fire_laser():
+	$Zap.play()
 	laser.fire()
 	laser_fired.emit()
-
+	
 func destroy():
 	SignalBus.end_condition.emit(!is_player1)	
 	
