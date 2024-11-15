@@ -112,7 +112,8 @@ scale = Vector2(0.66, 0.66)
 transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
-position = Vector2(960, 541)
+position = Vector2(1125.76, 689.894)
+scale = Vector2(1.17266, 1.27573)
 texture = ExtResource("10_71mxc")
 
 [node name="Headline" type="Label" parent="Splash/Credits"]
@@ -187,7 +188,8 @@ scale = Vector2(0.66, 0.66)
 transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
-position = Vector2(960, 541)
+position = Vector2(1128.03, 686.106)
+scale = Vector2(1.17503, 1.26871)
 texture = ExtResource("10_71mxc")
 
 [node name="GGJWild" type="Sprite2D" parent="Splash/Theme"]
