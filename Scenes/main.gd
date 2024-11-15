@@ -15,7 +15,8 @@ func _ready():
 	$Splash/Theme.visible = false
 	if SignalBus.already_seen_splash==false:
 		await get_tree().create_timer(3).timeout
-	$Music.play()
+	SignalBus.music = $Music
+	SignalBus.music.play()
 	$Splash/Credits.visible = false
 	SignalBus.already_seen_splash=true
 	$UI.visible=true#so I can hide it in editor

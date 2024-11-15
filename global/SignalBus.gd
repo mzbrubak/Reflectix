@@ -16,6 +16,8 @@ var piece_rotation_state=null
 var already_seen_splash=false
 var rotate_piece=null
 
+var music=null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
