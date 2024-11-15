@@ -107,7 +107,6 @@ visible = false
 [node name="Splash" type="CanvasLayer" parent="."]
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
-visible = false
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
 position = Vector2(960, 541)
@@ -176,7 +175,6 @@ Fonts:
 Oswald, Lato, Sedgwich(OFL)"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
-visible = false
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
 position = Vector2(960, 541)
@@ -214,6 +212,7 @@ text = " #75"
 visible = false
 
 [node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
+modulate = Color(1, 1, 1, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
@@ -240,6 +239,7 @@ text = "Rematch?"
 visible = false
 
 [node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
+modulate = Color(1, 1, 1, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
