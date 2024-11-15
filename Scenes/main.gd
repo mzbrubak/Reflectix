@@ -6,22 +6,18 @@ extends Node2D
 @onready var activeplayerUI=$"UI/VBoxContainer/ActivePlayer"
 var move_made=false
 var active_player=0#0=player 1, 1=player 2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#splash	
 	SignalBus.end_condition.connect(_on_end_condition)
-	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(3).timeout
-	$Splash/Theme.visible = false
-	
-	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(3).timeout
-	$Splash/Credits.visible = false
-	
-	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(5).timeout
-	$Splash/Instructions.visible = false
-	
+	if SignalBus.already_seen_splash==true:
+		$Splash/Theme.visible = false
+		$Splash/Credits.visible = false
+		$Splash/Instructions.visible = false
+		start_game()
+
+func start_game():	
 	SignalBus.music = $Music
 	SignalBus.music.play()
 	SignalBus.already_seen_splash=true
@@ -30,9 +26,11 @@ func _ready():
 	P1Laser.laser_fired.connect(post_laser_fired)
 	SignalBus.move_made.connect(on_move_made)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
 
 func on_move_made(move):
 	endturn_button.disabled=!move#disabled if move not yet made
@@ -51,6 +49,7 @@ func post_laser_fired():
 	endturn.connect(switch_turns)
 	endturn_button.text="End Turn"
 	SignalBus.selection.emit(false)
+
 
 func switch_turns():
 	endturn.disconnect(switch_turns)
@@ -73,13 +72,27 @@ func switch_turns():
 	SignalBus.piece_location=null
 	SignalBus.piece_rotation_state=null
 		
+		
 func _on_end_condition(state):
 	if state == true:
 		$Splash/RedWins.visible = true
 	elif state == false:
 		$Splash/BlueWins.visible = true
 		
-	
+		
 func _on_rematch_pressed():
 	SignalBus.rematch()
 	get_tree().reload_current_scene()
+
+
+func _on_next_theme_pressed() -> void:	
+	$Splash/Theme.visible = false
+
+
+func _on_next_credits_pressed() -> void:
+	$Splash/Credits.visible = false
+
+
+func _on_next_instructions_pressed() -> void:
+	$Splash/Instructions.visible = false
+	start_game()

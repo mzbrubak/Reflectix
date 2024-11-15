@@ -173,6 +173,15 @@ position = Vector2(414.5, 340.691)
 scale = Vector2(1.66797, 1.64378)
 texture = ExtResource("14_x4kk4")
 
+[node name="NextInstructions" type="Button" parent="Splash/Instructions"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
+
 [node name="Credits" type="CanvasLayer" parent="Splash"]
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
@@ -247,6 +256,15 @@ game-over-39-199830/
 Open Font Licensed:
 Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display"
 
+[node name="NextCredits" type="Button" parent="Splash/Credits"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
+
 [node name="Theme" type="CanvasLayer" parent="Splash"]
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
@@ -254,7 +272,7 @@ position = Vector2(960, 541)
 texture = ExtResource("10_71mxc")
 
 [node name="GGJWild" type="Sprite2D" parent="Splash/Theme"]
-position = Vector2(320, 393)
+position = Vector2(320, 338)
 scale = Vector2(0.5765, 0.5765)
 texture = ExtResource("11_fp07y")
 
@@ -274,12 +292,21 @@ anchors_preset = -1
 anchor_right = 0.122
 anchor_bottom = 0.563
 offset_left = 115.0
-offset_top = 655.0
+offset_top = 558.0
 offset_right = 299.76
-offset_bottom = 367.96
+offset_bottom = 270.96
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
 theme_override_font_sizes/normal_font_size = 211
 text = " #75"
+
+[node name="NextTheme" type="Button" parent="Splash/Theme"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
 
 [node name="RedWins" type="CanvasLayer" parent="Splash"]
 visible = false
@@ -339,5 +366,11 @@ text = "Rematch?"
 stream = ExtResource("18_v31nm")
 parameters/looping = true
 
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_instructions_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Theme/NextTheme" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]
