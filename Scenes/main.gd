@@ -19,7 +19,7 @@ func _ready():
 	$Splash/Credits.visible = false
 	
 	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(5).timeout
 	$Splash/Instructions.visible = false
 	
 	SignalBus.music = $Music
