@@ -13,11 +13,17 @@ func _ready():
 	if SignalBus.already_seen_splash==false:
 		await get_tree().create_timer(3).timeout
 	$Splash/Theme.visible = false
+	
 	if SignalBus.already_seen_splash==false:
 		await get_tree().create_timer(3).timeout
+	$Splash/Credits.visible = false
+	
+	if SignalBus.already_seen_splash==false:
+		await get_tree().create_timer(3).timeout
+	$Splash/Instructions.visible = false
+	
 	SignalBus.music = $Music
 	SignalBus.music.play()
-	$Splash/Credits.visible = false
 	SignalBus.already_seen_splash=true
 	$UI.visible=true#so I can hide it in editor
 	endturn.connect(P1Laser.fire_laser)

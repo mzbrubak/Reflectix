@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=23 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
@@ -10,11 +10,15 @@
 [ext_resource type="Script" path="res://Scenes/player_2_pieces.gd" id="8_nj1uy"]
 [ext_resource type="Texture2D" uid="uid://dd3qagwj88i63" path="res://img/background.png" id="10_71mxc"]
 [ext_resource type="Texture2D" uid="uid://dqjc7kw0ssd5c" path="res://theme/GWJ-Full-Logo-tag-Orange2.svg" id="11_fp07y"]
+[ext_resource type="Texture2D" uid="uid://c2po1delixic8" path="res://img/tutorial/tutorial-move2.png" id="11_sonqs"]
 [ext_resource type="Texture2D" uid="uid://cxp11ivlusbtt" path="res://theme/theme.png" id="12_brtvm"]
 [ext_resource type="Texture2D" uid="uid://dbvgt8w1ruyle" path="res://theme/wildcards.png" id="13_35aso"]
+[ext_resource type="Texture2D" uid="uid://by8peo3f4vkwq" path="res://img/tutorial/tutorial-destroy.png" id="13_dc34e"]
 [ext_resource type="FontFile" uid="uid://cybpab1vbk3w" path="res://fonts/Oswald/Oswald-VariableFont_wght.ttf" id="14_olf2d"]
+[ext_resource type="Texture2D" uid="uid://cfbjmfju3dxtq" path="res://img/tutorial/tutorial-win.png" id="14_x4kk4"]
 [ext_resource type="FontFile" uid="uid://u3xv5vfc63a4" path="res://fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf" id="15_83dkl"]
 [ext_resource type="FontFile" uid="uid://bd8y3x518wj4o" path="res://fonts/Lato/Lato-Regular.ttf" id="16_874sp"]
+[ext_resource type="Texture2D" uid="uid://ysgytqnyt7k7" path="res://img/tutorial/tutorial-rotate.png" id="17_0jjg0"]
 [ext_resource type="Texture2D" uid="uid://c87vpdpb57be5" path="res://img/end-condition-modal.png" id="17_d8u63"]
 [ext_resource type="FontFile" uid="uid://ceyr2s00fa1n" path="res://fonts/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf" id="18_5oqf6"]
 [ext_resource type="AudioStream" uid="uid://drl6lc6fv5vro" path="res://music/Melody.ogg" id="18_v31nm"]
@@ -106,6 +110,68 @@ state = Vector3i(1, 1, 0)
 visible = false
 
 [node name="Splash" type="CanvasLayer" parent="."]
+
+[node name="Instructions" type="CanvasLayer" parent="Splash"]
+
+[node name="Background" type="Sprite2D" parent="Splash/Instructions"]
+position = Vector2(960, 541)
+texture = ExtResource("10_71mxc")
+
+[node name="Move" type="Label" parent="Splash/Instructions"]
+offset_left = 176.0
+offset_top = 13.0
+offset_right = 859.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Click Objects to Move"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Move"]
+position = Vector2(302.254, 291)
+scale = Vector2(0.60146, 0.621243)
+texture = ExtResource("11_sonqs")
+
+[node name="Rotate" type="Label" parent="Splash/Instructions"]
+offset_left = 1056.0
+offset_top = 12.0
+offset_right = 1752.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Rotate When Selected"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Rotate"]
+position = Vector2(348.25, 284.703)
+scale = Vector2(1.45477, 1.45477)
+texture = ExtResource("17_0jjg0")
+
+[node name="Destroy" type="Label" parent="Splash/Instructions"]
+offset_left = 217.0
+offset_top = 475.0
+offset_right = 715.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Destroy Objects"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Destroy"]
+position = Vector2(257.75, 354.234)
+scale = Vector2(1.30205, 1.30205)
+texture = ExtResource("13_dc34e")
+
+[node name="Win" type="Label" parent="Splash/Instructions"]
+offset_left = 1010.0
+offset_top = 473.0
+offset_right = 1968.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Win: Destroy Their Laser"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Win"]
+position = Vector2(414.5, 340.691)
+scale = Vector2(1.66797, 1.64378)
+texture = ExtResource("14_x4kk4")
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
 
