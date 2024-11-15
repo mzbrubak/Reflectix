@@ -1,5 +1,4 @@
 extends Control
-var rotate_piece=null
 var rotation_buttons
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,13 +14,13 @@ func on_rotate_selection(rotate_selection):
 
 func on_piece(piece_node):
 	if piece_node==null:
-		SignalBus.set_piece_rotation.disconnect(rotate_piece.set_rotation_from_state)
-		rotate_piece=null
+		SignalBus.set_piece_rotation.disconnect(SignalBus.rotate_piece.set_rotation_from_state)
+		SignalBus.rotate_piece=null
 	else:
-		rotate_piece=piece_node
+		SignalBus.rotate_piece=piece_node
 		for rotation_button in rotation_buttons:
-			rotation_button.disabled=!is_rotation_accessible(rotation_button,rotate_piece.state)
-		SignalBus.set_piece_rotation.connect(rotate_piece.set_rotation_from_state)
+			rotation_button.disabled=!is_rotation_accessible(rotation_button,SignalBus.rotate_piece.state)
+		SignalBus.set_piece_rotation.connect(SignalBus.rotate_piece.set_rotation_from_state)
 
 func is_rotation_accessible(rotation_button, state)->bool:
 	var newstate=rotation_button.state

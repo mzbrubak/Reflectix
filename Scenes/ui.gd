@@ -28,6 +28,10 @@ func _on_undo_pressed():
 		SignalBus.undo_disabled.emit(true)
 		SignalBus.selection.emit(false)
 		SignalBus.move_made.emit(false)
+	
+	
+	SignalBus.set_piece_rotation.disconnect(SignalBus.rotate_piece.set_rotation_from_state)
+	SignalBus.rotate_piece=null	
 
 func _on_end_turn_pressed():
 	end_turn.emit()
