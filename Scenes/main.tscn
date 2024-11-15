@@ -167,8 +167,12 @@ offset_bottom = 1080.0
 theme_override_fonts/font = ExtResource("16_874sp")
 theme_override_font_sizes/font_size = 43
 text = "Royalty Free Sound:
+
 https://pixabay.com/sound-effects/laser-zap-90575/
-Explosion
+
+https://pixabay.com/sound-effects/
+explosion-sound-effect-2-241820/
+
 Game Over
 
 Fonts: 

@@ -31,6 +31,9 @@ func destroy():
 	$Rotation.collision_layer = 0
 	z_index = 0
 	
+	await get_tree().create_timer(.3).timeout
+	$AudioStreamPlayer2D.play()
+	
 func set_player1():
 	z_index = 100
 	is_player1 = true
