@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkuug16ke60wh"]
+[gd_scene load_steps=10 format=3 uid="uid://dkuug16ke60wh"]
 
 [ext_resource type="Script" path="res://Scenes/laseremitter.gd" id="1_du4aj"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="2_00luf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_noqw7"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="3_pk3ki"]
 [ext_resource type="AudioStream" uid="uid://chglxii5urjut" path="res://sfx/laser-zap-90575.mp3" id="6_vv2gb"]
+[ext_resource type="AudioStream" uid="uid://camatsbc2hvc4" path="res://sfx/the-sound-of-bombing-248404.mp3" id="7_yiuqq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huqak"]
 size = Vector2(16, 10)
@@ -56,3 +57,6 @@ shape = SubResource("RectangleShape2D_n4dm3")
 
 [node name="Zap" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_vv2gb")
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_yiuqq")

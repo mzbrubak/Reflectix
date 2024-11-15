@@ -23,7 +23,9 @@ func fire_laser():
 	laser_fired.emit()
 	
 func destroy():
-	SignalBus.end_condition.emit(!is_player1)	
+	$GameOver.play()
+	await get_tree().create_timer(1).timeout
+	SignalBus.end_condition.emit(!is_player1)
 	
 func set_player1():
 	is_player1 = true

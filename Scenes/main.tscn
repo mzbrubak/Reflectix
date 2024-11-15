@@ -165,7 +165,7 @@ offset_top = 432.0
 offset_right = 1841.0
 offset_bottom = 1080.0
 theme_override_fonts/font = ExtResource("16_874sp")
-theme_override_font_sizes/font_size = 43
+theme_override_font_sizes/font_size = 37
 text = "Royalty Free Sound:
 
 https://pixabay.com/sound-effects/laser-zap-90575/
@@ -173,7 +173,8 @@ https://pixabay.com/sound-effects/laser-zap-90575/
 https://pixabay.com/sound-effects/
 explosion-sound-effect-2-241820/
 
-Game Over
+https://pixabay.com/sound-effects/
+the-sound-of-bombing-248404/
 
 Fonts: 
 Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display (OFL)"
