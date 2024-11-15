@@ -9,6 +9,7 @@ var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#splash	
+	SignalBus.end_condition.connect(_on_end_condition)
 	if SignalBus.already_seen_splash==false:
 		await get_tree().create_timer(3).timeout
 	$Splash/Theme.visible = false
@@ -31,7 +32,6 @@ func on_move_made(move):
 	SignalBus.has_move_been_made=move
 	SignalBus.undo_disabled.emit(true)	
 	
-	SignalBus.end_condition.connect(_on_end_condition)
 
 func post_laser_fired():
 	SignalBus.undo_disabled.emit(true)
