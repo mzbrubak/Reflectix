@@ -24,11 +24,9 @@ func fire_laser():
 	
 func destroy():	
 	SignalBus.music.stop()	
-	print("timer1")
 	$Timer.start()	
 
 func _on_timer_timeout() -> void:
-	print("timer2")
 	SignalBus.end_condition.emit(!is_player1)
 	$GameOver.play()	
 	
