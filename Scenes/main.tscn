@@ -114,6 +114,7 @@ visible = false
 [node name="Splash" type="CanvasLayer" parent="."]
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
+visible = false
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
 position = Vector2(960, 541)
@@ -182,6 +183,7 @@ Fonts:
 Oswald, Lato, Sedgwich(OFL)"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
+visible = false
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
 position = Vector2(960, 541)

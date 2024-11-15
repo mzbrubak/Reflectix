@@ -18,7 +18,7 @@ func on_piece(piece_node):
 		SignalBus.set_piece_rotation.disconnect(rotate_piece.set_rotation_from_state)
 		rotate_piece=null
 	else:
-		rotate_piece=piece_node.get_parent()
+		rotate_piece=piece_node
 		for rotation_button in rotation_buttons:
 			rotation_button.disabled=!is_rotation_accessible(rotation_button,rotate_piece.state)
 		SignalBus.set_piece_rotation.connect(rotate_piece.set_rotation_from_state)
