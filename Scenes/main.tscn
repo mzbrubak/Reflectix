@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=18 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
 [ext_resource type="PackedScene" uid="uid://cn3fhjv74000f" path="res://Scenes/board.tscn" id="2_0yl2j"]
 [ext_resource type="PackedScene" uid="uid://yocbirg225wt" path="res://Scenes/mirror.tscn" id="2_6nsyl"]
 [ext_resource type="Script" path="res://Scenes/player_1_pieces.gd" id="3_xtao0"]
-[ext_resource type="PackedScene" uid="uid://db4wpu213jqyc" path="res://Scenes/king.tscn" id="4_kfvhc"]
 [ext_resource type="PackedScene" uid="uid://q1n7pyb7j2wj" path="res://Scenes/ui.tscn" id="5_ctrvt"]
 [ext_resource type="PackedScene" uid="uid://d1bnj1d6gsewg" path="res://Scenes/double_mirror.tscn" id="6_krj5m"]
 [ext_resource type="Script" path="res://Scenes/player_2_pieces.gd" id="8_nj1uy"]
@@ -16,6 +15,8 @@
 [ext_resource type="FontFile" uid="uid://cybpab1vbk3w" path="res://fonts/Oswald/Oswald-VariableFont_wght.ttf" id="14_olf2d"]
 [ext_resource type="FontFile" uid="uid://u3xv5vfc63a4" path="res://fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf" id="15_83dkl"]
 [ext_resource type="FontFile" uid="uid://bd8y3x518wj4o" path="res://fonts/Lato/Lato-Regular.ttf" id="16_874sp"]
+[ext_resource type="Texture2D" uid="uid://c87vpdpb57be5" path="res://img/end-condition-modal.png" id="17_d8u63"]
+[ext_resource type="FontFile" uid="uid://ceyr2s00fa1n" path="res://fonts/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf" id="18_5oqf6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nomae")
@@ -35,10 +36,6 @@ script = ExtResource("3_xtao0")
 
 [node name="LaserEmitter" parent="Player1Pieces" instance=ExtResource("1_g7mjg")]
 position = Vector2(-130, 60)
-
-[node name="Red King" parent="Player1Pieces" instance=ExtResource("4_kfvhc")]
-visible = false
-position = Vector2(-165, -102)
 
 [node name="1Mirror" parent="Player1Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(50, 60)
@@ -75,10 +72,6 @@ script = ExtResource("8_nj1uy")
 position = Vector2(90, -80)
 rotation = 3.14159
 state = Vector3i(-1, 0, 0)
-
-[node name="Blue King" parent="Player2Pieces" instance=ExtResource("4_kfvhc")]
-visible = false
-position = Vector2(119, 88)
 
 [node name="Mirror" parent="Player2Pieces" instance=ExtResource("2_6nsyl")]
 position = Vector2(-90, -80)
@@ -216,3 +209,55 @@ offset_bottom = 376.96
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
 theme_override_font_sizes/normal_font_size = 211
 text = " #75"
+
+[node name="RedWins" type="CanvasLayer" parent="Splash"]
+visible = false
+
+[node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
+position = Vector2(825, 477.5)
+scale = Vector2(0.648958, 0.806481)
+texture = ExtResource("17_d8u63")
+
+[node name="Player Wins" type="Label" parent="Splash/RedWins"]
+offset_left = 499.0
+offset_top = 344.0
+offset_right = 1204.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 98
+text = "Player 1 - Red Wins!"
+
+[node name="Button" type="Button" parent="Splash/RedWins"]
+offset_left = 622.0
+offset_top = 524.0
+offset_right = 1093.0
+offset_bottom = 686.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 122
+text = "Rematch?"
+
+[node name="BlueWins" type="CanvasLayer" parent="Splash"]
+visible = false
+
+[node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
+position = Vector2(825, 477.5)
+scale = Vector2(0.648958, 0.806481)
+texture = ExtResource("17_d8u63")
+
+[node name="Player Wins" type="Label" parent="Splash/BlueWins"]
+offset_left = 499.0
+offset_top = 344.0
+offset_right = 1204.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 98
+text = "Player 2 - Blue Wins!"
+
+[node name="Button" type="Button" parent="Splash/BlueWins"]
+offset_left = 622.0
+offset_top = 524.0
+offset_right = 1093.0
+offset_bottom = 686.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 122
+text = "Rematch?"

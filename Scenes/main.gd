@@ -26,7 +26,9 @@ func _process(_delta):
 func on_move_made(move):
 	endturn_button.disabled=!move#disabled if move not yet made
 	SignalBus.has_move_been_made=move
-	SignalBus.undo_disabled.emit(true)
+	SignalBus.undo_disabled.emit(true)	
+	
+	SignalBus.end_condition.connect(_on_end_condition)
 
 func post_laser_fired():
 	SignalBus.undo_disabled.emit(true)
@@ -60,5 +62,11 @@ func switch_turns():
 	SignalBus.move_made.emit(false)
 	SignalBus.piece_location=null
 	SignalBus.piece_rotation_state=null
+		
+func _on_end_condition(state):
+	if state == true:
+		$Splash/RedWins.visible = true
+	elif state == false:
+		$Splash/BlueWins.visible = true
 		
 	

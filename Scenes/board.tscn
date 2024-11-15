@@ -771,7 +771,7 @@ collision_mask = 16
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D"]
-position = Vector2(109.5, 22)
+position = Vector2(109.5, 24)
 shape = SubResource("RectangleShape2D_36t3u")
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="SelectorCollisions"]
@@ -780,7 +780,7 @@ collision_mask = 16
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D2"]
-position = Vector2(-22, -71)
+position = Vector2(-24, -71)
 shape = SubResource("RectangleShape2D_jiie1")
 
 [node name="RigidBody2D3" type="RigidBody2D" parent="SelectorCollisions"]
@@ -789,7 +789,7 @@ collision_mask = 16
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D3"]
-position = Vector2(243, -70)
+position = Vector2(245, -70)
 shape = SubResource("RectangleShape2D_fhxq6")
 
 [node name="RigidBody2D4" type="RigidBody2D" parent="SelectorCollisions"]
@@ -798,5 +798,5 @@ collision_mask = 16
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectorCollisions/RigidBody2D4"]
-position = Vector2(110, -163)
+position = Vector2(110, -165)
 shape = SubResource("RectangleShape2D_36t3u")

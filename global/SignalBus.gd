@@ -8,6 +8,7 @@ signal query_piece_rotation(piece_node)#goal: when selecting a piece, get its ro
 signal set_piece_rotation(newstate)#goal: when pressing a button in rotation UI, update rotation and z state of piece accordingly
 signal move_made(move:bool)
 signal undo_disabled(disabled)
+signal end_condition(state)
 
 var piece_location = null
 var has_move_been_made:bool = false

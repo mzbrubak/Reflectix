@@ -11,6 +11,7 @@ var is_player1 = true;
 func _ready():
 	rotation=0
 	set_rotation_from_state(state)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -21,7 +22,7 @@ func fire_laser():
 	laser_fired.emit()
 
 func destroy():
-	print("Lol nope")#this piece can't be destroyed
+	SignalBus.end_condition.emit(!is_player1)	
 	
 func set_player1():
 	is_player1 = true
