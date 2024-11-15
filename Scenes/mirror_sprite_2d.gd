@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @export var selector: PackedScene
-@onready var mirror = $".."
+@onready var mirror = $"../.."
 
 var selecting = false
 var player1_moving = true;

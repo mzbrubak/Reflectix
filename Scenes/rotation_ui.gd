@@ -7,7 +7,7 @@ func _ready():
 	SignalBus.piece.connect(on_piece)
 	rotation_buttons=self.get_children()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func on_rotate_selection(rotate_selection):
@@ -15,11 +15,13 @@ func on_rotate_selection(rotate_selection):
 
 func on_piece(piece_node):
 	if piece_node==null:
+		SignalBus.set_piece_rotation.disconnect(rotate_piece.set_rotation_from_state)
 		rotate_piece=null
 	else:
 		rotate_piece=piece_node.get_parent()
 		for rotation_button in rotation_buttons:
 			rotation_button.disabled=!is_rotation_accessible(rotation_button,rotate_piece.state)
+		SignalBus.set_piece_rotation.connect(rotate_piece.set_rotation_from_state)
 
 func is_rotation_accessible(rotation_button, state)->bool:
 	var newstate=rotation_button.state

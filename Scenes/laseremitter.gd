@@ -77,3 +77,5 @@ func set_rotation_from_state(rotationstate):
 		Vector3i(0,0,1):
 			pass#swap sprite
 			$Rotation.rotation=0
+			
+	$Rotation/Body/Laser.update_rotation()
