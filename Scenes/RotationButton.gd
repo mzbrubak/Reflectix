@@ -12,7 +12,7 @@ func _process(_delta):
 
 
 func _on_pressed():
-	SignalBus
+	SignalBus.piece_rotation_state=self.get_parent().rotate_piece.state
 	SignalBus.set_piece_rotation.emit(state)
 	get_tree().call_group("selectors", "queue_free")
 	SignalBus.move_made.emit(true)			

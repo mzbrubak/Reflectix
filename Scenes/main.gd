@@ -58,5 +58,7 @@ func switch_turns():
 		SignalBus.is_player1_moving.emit(true)
 	SignalBus.piece.emit(null)
 	SignalBus.move_made.emit(false)
+	SignalBus.piece_location=null
+	SignalBus.piece_rotation_state=null
 		
 	
