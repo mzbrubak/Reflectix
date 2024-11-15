@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @export var selector: PackedScene
-@onready var mirror = $".."
+@onready var mirror = $"../.."
 
 var selecting = false
 var player1_moving = true;
@@ -63,8 +63,9 @@ func _input(event):
 			mirror.add_child(new_selector_diagonal4)
 			
 			#send piece to selectors
-			SignalBus.piece.emit($"..")
-			print($"..")
+			SignalBus.piece.emit($"../..")
+			#print($"../..")
+
 func _on_selection(selected):
 	selecting = selected
 	#print(self,"selected=",selecting)

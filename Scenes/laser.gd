@@ -4,12 +4,15 @@ var parent_rotation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	parent_rotation=self.get_parent().get_parent().get_parent().rotation#needed to correct for direction of raycast being set to local
+	parent_rotation=self.get_parent().get_parent().rotation#needed to correct for direction of raycast being set to local
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func update_rotation():
+	parent_rotation=self.get_parent().get_parent().rotation
 
 func fire():
 	z_index=100;

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://yocbirg225wt"]
+[gd_scene load_steps=10 format=3 uid="uid://yocbirg225wt"]
 
 [ext_resource type="Script" path="res://Scenes/mirror.gd" id="1_2hn2q"]
 [ext_resource type="PackedScene" uid="uid://be6uqcjerdu07" path="res://Scenes/laser.tscn" id="2_054yh"]
 [ext_resource type="Texture2D" uid="uid://bndd2jsyordbq" path="res://Art Assets/Mirrors-export.png" id="2_uly1i"]
 [ext_resource type="Script" path="res://Scenes/mirror_sprite_2d.gd" id="3_x6vsf"]
 [ext_resource type="PackedScene" uid="uid://twyd70pvvlew" path="res://Scenes/selector.tscn" id="4_wdtwo"]
+[ext_resource type="AudioStream" uid="uid://b7h0gtt13h35g" path="res://sfx/explosion-sound-effect-2-241820.mp3" id="6_dmo75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu28f"]
 
@@ -92,3 +93,6 @@ shape = SubResource("SegmentShape2D_g8scn")
 [node name="Laser" parent="Rotation/MirrorSurface" instance=ExtResource("2_054yh")]
 visibility_layer = 15
 target_position = Vector2(-50, 50)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_dmo75")

@@ -1,21 +1,33 @@
 [gd_scene load_steps=5 format=3 uid="uid://twyd70pvvlew"]
 
-[ext_resource type="Texture2D" uid="uid://ckq7nkjs36ln4" path="res://img/select.png" id="1_j5r05"]
+[ext_resource type="Texture2D" uid="uid://m8ergxosolvi" path="res://img/select-white.png" id="2_7m152"]
 [ext_resource type="Script" path="res://Scenes/selector.gd" id="2_dhy8e"]
 [ext_resource type="Script" path="res://Scenes/selector_sprite_2d.gd" id="3_cir4s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrs1n"]
 
 [node name="Selector" type="Area2D" groups=["selectors"]]
+visible = false
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("2_dhy8e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_j5r05")
+modulate = Color(1, 1, 1, 0.560784)
+texture = ExtResource("2_7m152")
 script = ExtResource("3_cir4s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rrs1n")
 
+[node name="RenderTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="RenderTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="Sprite2D" method="_on_move_timer_timeout"]
