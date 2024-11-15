@@ -22,10 +22,15 @@ func fire_laser():
 	laser.fire()
 	laser_fired.emit()
 	
-func destroy():
-	$GameOver.play()
-	await get_tree().create_timer(1).timeout
+func destroy():	
+	SignalBus.music.stop()	
+	print("timer1")
+	$Timer.start()	
+
+func _on_timer_timeout() -> void:
+	print("timer2")
 	SignalBus.end_condition.emit(!is_player1)
+	$GameOver.play()	
 	
 func set_player1():
 	is_player1 = true
