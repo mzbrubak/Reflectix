@@ -8,6 +8,12 @@ var move_made=false
 var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#splash	
+	await get_tree().create_timer(0).timeout
+	$Splash/Theme.visible = false
+	await get_tree().create_timer(0).timeout
+	$Splash/Credits.visible = false
+	
 	$UI.visible=true#so I can hide it in editor
 	endturn.connect(P1Laser.fire_laser)
 	P1Laser.laser_fired.connect(post_laser_fired)

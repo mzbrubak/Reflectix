@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=17 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
@@ -9,9 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://q1n7pyb7j2wj" path="res://Scenes/ui.tscn" id="5_ctrvt"]
 [ext_resource type="PackedScene" uid="uid://d1bnj1d6gsewg" path="res://Scenes/double_mirror.tscn" id="6_krj5m"]
 [ext_resource type="Script" path="res://Scenes/player_2_pieces.gd" id="8_nj1uy"]
+[ext_resource type="Texture2D" uid="uid://dd3qagwj88i63" path="res://img/background.png" id="10_71mxc"]
+[ext_resource type="Texture2D" uid="uid://dqjc7kw0ssd5c" path="res://theme/GWJ-Full-Logo-tag-Orange2.svg" id="11_fp07y"]
+[ext_resource type="Texture2D" uid="uid://cxp11ivlusbtt" path="res://theme/theme.png" id="12_brtvm"]
+[ext_resource type="Texture2D" uid="uid://dbvgt8w1ruyle" path="res://theme/wildcards.png" id="13_35aso"]
+[ext_resource type="FontFile" uid="uid://cybpab1vbk3w" path="res://fonts/Oswald/Oswald-VariableFont_wght.ttf" id="14_olf2d"]
+[ext_resource type="FontFile" uid="uid://u3xv5vfc63a4" path="res://fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf" id="15_83dkl"]
+[ext_resource type="FontFile" uid="uid://bd8y3x518wj4o" path="res://fonts/Lato/Lato-Regular.ttf" id="16_874sp"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nomae")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(731, 336)
+texture = ExtResource("10_71mxc")
 
 [node name="Board" parent="." instance=ExtResource("2_0yl2j")]
 position = Vector2(-130, 60)
@@ -99,3 +110,107 @@ state = Vector3i(1, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
 visible = false
+
+[node name="Splash" type="CanvasLayer" parent="."]
+
+[node name="Credits" type="CanvasLayer" parent="Splash"]
+
+[node name="Background" type="Sprite2D" parent="Splash/Credits"]
+position = Vector2(960, 541)
+texture = ExtResource("10_71mxc")
+
+[node name="Headline" type="Label" parent="Splash/Credits"]
+offset_left = 723.0
+offset_top = 4.0
+offset_right = 1128.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 115
+text = "Reflectrix"
+
+[node name="Subtitle" type="Label" parent="Splash/Credits"]
+offset_left = 540.0
+offset_top = 161.0
+offset_right = 1375.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("15_83dkl")
+theme_override_font_sizes/font_size = 68
+text = "A strategy laser chess game"
+
+[node name="Credits" type="Label" parent="Splash/Credits"]
+offset_left = 217.0
+offset_top = 283.0
+offset_right = 622.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Credits"
+
+[node name="Credit Names" type="Label" parent="Splash/Credits"]
+offset_left = 133.0
+offset_top = 428.0
+offset_right = 593.0
+offset_bottom = 704.0
+theme_override_fonts/font = ExtResource("16_874sp")
+theme_override_font_sizes/font_size = 60
+text = "Felix DuBois
+NathanSDunn
+PurpleHues"
+
+[node name="Assets" type="Label" parent="Splash/Credits"]
+offset_left = 1093.0
+offset_top = 283.0
+offset_right = 1498.0
+offset_bottom = 455.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Assets"
+
+[node name="Assets Names" type="Label" parent="Splash/Credits"]
+offset_left = 893.0
+offset_top = 428.0
+offset_right = 1833.0
+offset_bottom = 1076.0
+theme_override_fonts/font = ExtResource("16_874sp")
+theme_override_font_sizes/font_size = 60
+text = "Royalty Free Sound:
+Laser
+Explosion
+Game Over
+
+Fonts: 
+Oswald, Lato, Sedgwich(OFL)"
+
+[node name="Theme" type="CanvasLayer" parent="Splash"]
+
+[node name="Background" type="Sprite2D" parent="Splash/Theme"]
+position = Vector2(960, 541)
+texture = ExtResource("10_71mxc")
+
+[node name="GGJWild" type="Sprite2D" parent="Splash/Theme"]
+position = Vector2(320, 393)
+scale = Vector2(0.5765, 0.5765)
+texture = ExtResource("11_fp07y")
+
+[node name="Theme" type="Sprite2D" parent="Splash/Theme"]
+position = Vector2(1218.53, 274)
+scale = Vector2(0.431169, 0.431169)
+texture = ExtResource("12_brtvm")
+
+[node name="Wildcards" type="Sprite2D" parent="Splash/Theme"]
+position = Vector2(1219, 742)
+scale = Vector2(0.432724, 0.432724)
+texture = ExtResource("13_35aso")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Splash/Theme"]
+modulate = Color(0.980392, 0.380392, 0.286275, 1)
+anchors_preset = -1
+anchor_right = 0.122
+anchor_bottom = 0.563
+offset_left = 115.0
+offset_top = 664.0
+offset_right = 299.76
+offset_bottom = 376.96
+theme_override_fonts/normal_font = ExtResource("14_olf2d")
+theme_override_font_sizes/normal_font_size = 211
+text = " #75"
