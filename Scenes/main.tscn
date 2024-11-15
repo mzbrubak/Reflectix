@@ -123,52 +123,53 @@ theme_override_font_sizes/font_size = 115
 text = "Reflectrix"
 
 [node name="Subtitle" type="Label" parent="Splash/Credits"]
-offset_left = 540.0
-offset_top = 161.0
-offset_right = 1375.0
-offset_bottom = 276.0
+offset_left = 426.0
+offset_top = 173.0
+offset_right = 1530.0
+offset_bottom = 288.0
 theme_override_fonts/font = ExtResource("15_83dkl")
 theme_override_font_sizes/font_size = 68
-text = "A strategy laser chess game"
+text = "A 2 Player Strategy Laser Chess Game"
 
 [node name="Credits" type="Label" parent="Splash/Credits"]
-offset_left = 180.0
+offset_left = 217.0
 offset_top = 283.0
-offset_right = 585.0
+offset_right = 622.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
 text = "Credits"
 
 [node name="Credit Names" type="Label" parent="Splash/Credits"]
-offset_left = 133.0
-offset_top = 428.0
-offset_right = 593.0
-offset_bottom = 704.0
+offset_left = 77.0
+offset_top = 425.0
+offset_right = 799.0
+offset_bottom = 701.0
 theme_override_fonts/font = ExtResource("16_874sp")
 theme_override_font_sizes/font_size = 60
-text = "Felix DuBois
-NathanSDunn
-PurpleHues"
+text = "Felix DuBois (code)
+NathanSDunn (code, music)
+PurpleHues (art)"
 
 [node name="Assets" type="Label" parent="Splash/Credits"]
-offset_left = 1117.0
-offset_top = 283.0
-offset_right = 1522.0
-offset_bottom = 455.0
+offset_left = 1150.0
+offset_top = 282.0
+offset_right = 1555.0
+offset_bottom = 454.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
 text = "Assets"
 
 [node name="Assets Names" type="Label" parent="Splash/Credits"]
-offset_left = 758.0
+offset_left = 923.0
 offset_top = 432.0
-offset_right = 1841.0
+offset_right = 2006.0
 offset_bottom = 1080.0
 theme_override_fonts/font = ExtResource("16_874sp")
 theme_override_font_sizes/font_size = 37
-text = "Royalty Free Sound:
+text = "We created new art, music & code.
 
+Royalty Free Sound Effects:
 https://pixabay.com/sound-effects/laser-zap-90575/
 
 https://pixabay.com/sound-effects/
@@ -177,8 +178,8 @@ explosion-sound-effect-2-241820/
 https://pixabay.com/sound-effects/
 game-over-39-199830/
 
-Fonts: 
-Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display (OFL)"
+Open Font Licensed:
+Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
 
@@ -207,9 +208,9 @@ anchors_preset = -1
 anchor_right = 0.122
 anchor_bottom = 0.563
 offset_left = 115.0
-offset_top = 664.0
+offset_top = 655.0
 offset_right = 299.76
-offset_bottom = 376.96
+offset_bottom = 367.96
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
 theme_override_font_sizes/normal_font_size = 211
 text = " #75"
