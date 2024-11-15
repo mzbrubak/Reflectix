@@ -30,7 +30,7 @@ texture = ExtResource("10_71mxc")
 position = Vector2(-130, 60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 script = ExtResource("3_xtao0")
@@ -108,6 +108,8 @@ visible = false
 [node name="Splash" type="CanvasLayer" parent="."]
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
 position = Vector2(960, 541)
@@ -181,6 +183,8 @@ Fonts:
 Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display (OFL)"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
 position = Vector2(960, 541)
@@ -208,14 +212,17 @@ anchor_right = 0.122
 anchor_bottom = 0.563
 offset_left = 115.0
 offset_top = 664.0
-offset_right = 299.76
-offset_bottom = 376.96
+offset_right = 422.16
+offset_bottom = 627.64
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
-theme_override_font_sizes/normal_font_size = 211
+theme_override_font_sizes/normal_font_size = 206
 text = " #75"
 
 [node name="RedWins" type="CanvasLayer" parent="Splash"]
 visible = false
+offset = Vector2(-144, -72)
+scale = Vector2(0.8, 0.8)
+transform = Transform2D(0.8, 0, 0, 0.8, -144, -72)
 
 [node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
 modulate = Color(1, 1, 1, 0.666667)
@@ -243,6 +250,9 @@ text = "Rematch?"
 
 [node name="BlueWins" type="CanvasLayer" parent="Splash"]
 visible = false
+offset = Vector2(-144, -72)
+scale = Vector2(0.8, 0.8)
+transform = Transform2D(0.8, 0, 0, 0.8, -144, -72)
 
 [node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
 modulate = Color(1, 1, 1, 0.666667)

@@ -159,7 +159,6 @@ atlas = ExtResource("2_hmqnv")
 region = Rect2(64, 192, 64, 64)
 
 [node name="RotationUI" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
