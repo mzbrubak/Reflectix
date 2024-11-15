@@ -169,6 +169,7 @@ grow_vertical = 2
 script = ExtResource("1_sghgu")
 
 [node name="Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -259,6 +260,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(-1, 0, 0)
 
 [node name="Northwest+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -269,6 +271,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(-1, 1, 1)
 
 [node name="North+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -279,6 +282,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(0, 1, 1)
 
 [node name="Northeast+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -289,6 +293,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(1, 1, 1)
 
 [node name="East+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -299,6 +304,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(1, 0, 1)
 
 [node name="Southeast+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -309,6 +315,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(1, -1, 1)
 
 [node name="South+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -319,6 +326,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(0, -1, 1)
 
 [node name="Southwest+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -329,6 +337,7 @@ script = ExtResource("5_75s3h")
 state = Vector3i(-1, -1, 1)
 
 [node name="West+Up" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

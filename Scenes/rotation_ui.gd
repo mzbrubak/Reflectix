@@ -19,7 +19,7 @@ func on_piece(piece_node):
 	else:
 		SignalBus.rotate_piece=piece_node
 		for rotation_button in rotation_buttons:
-			rotation_button.disabled=!is_rotation_accessible(rotation_button,SignalBus.rotate_piece.state)
+			rotation_button.disabled=is_rotation_accessible(rotation_button,SignalBus.rotate_piece.state)
 		SignalBus.set_piece_rotation.connect(SignalBus.rotate_piece.set_rotation_from_state)
 
 func is_rotation_accessible(rotation_button, state)->bool:
