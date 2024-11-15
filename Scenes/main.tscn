@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=19 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
@@ -17,6 +17,7 @@
 [ext_resource type="FontFile" uid="uid://bd8y3x518wj4o" path="res://fonts/Lato/Lato-Regular.ttf" id="16_874sp"]
 [ext_resource type="Texture2D" uid="uid://c87vpdpb57be5" path="res://img/end-condition-modal.png" id="17_d8u63"]
 [ext_resource type="FontFile" uid="uid://ceyr2s00fa1n" path="res://fonts/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf" id="18_5oqf6"]
+[ext_resource type="AudioStream" uid="uid://drl6lc6fv5vro" path="res://music/Melody.ogg" id="18_v31nm"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nomae")
@@ -266,6 +267,10 @@ offset_bottom = 686.0
 theme_override_fonts/font = ExtResource("18_5oqf6")
 theme_override_font_sizes/font_size = 122
 text = "Rematch?"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_v31nm")
+parameters/looping = true
 
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]
