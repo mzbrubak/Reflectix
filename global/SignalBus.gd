@@ -13,6 +13,7 @@ signal end_condition(state)
 var piece_location = null
 var has_move_been_made:bool = false
 var piece_rotation_state=null
+var already_seen_splash=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,3 +22,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func rematch():
+	piece_location=null
+	has_move_been_made=false
+	piece_rotation_state=null

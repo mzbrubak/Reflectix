@@ -9,11 +9,13 @@ var active_player=0#0=player 1, 1=player 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#splash	
-	await get_tree().create_timer(0).timeout
+	if SignalBus.already_seen_splash==false:
+		await get_tree().create_timer(3).timeout
 	$Splash/Theme.visible = false
-	await get_tree().create_timer(0).timeout
+	if SignalBus.already_seen_splash==false:
+		await get_tree().create_timer(3).timeout
 	$Splash/Credits.visible = false
-	
+	SignalBus.already_seen_splash=true
 	$UI.visible=true#so I can hide it in editor
 	endturn.connect(P1Laser.fire_laser)
 	P1Laser.laser_fired.connect(post_laser_fired)
@@ -70,3 +72,6 @@ func _on_end_condition(state):
 		$Splash/BlueWins.visible = true
 		
 	
+func _on_rematch_pressed():
+	SignalBus.rematch()
+	get_tree().reload_current_scene()
