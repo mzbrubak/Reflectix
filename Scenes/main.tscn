@@ -381,11 +381,11 @@ text = "Rematch?"
 stream = ExtResource("18_v31nm")
 parameters/looping = true
 
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_instructions_pressed"]
-[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
-[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Theme/NextTheme" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]

@@ -27,7 +27,7 @@ func fire():
 		$BeamSegment.points[1]=self.get_collision_point()-self.global_position
 		$BeamSegment.points[1]=$BeamSegment.points[1].rotated(-parent_rotation)
 		var hit_ref=self.get_collider()
-		#print(hit_ref)
+		print(hit_ref.get_parent().get_parent())
 		if hit_ref.get_collision_layer_value(2)==true:#if target opaque
 			hit_ref.get_parent().get_parent().destroy()
 		elif hit_ref.get_collision_layer_value(1)==true:#if target reflective
