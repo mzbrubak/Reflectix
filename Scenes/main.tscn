@@ -312,19 +312,19 @@ text = "Next!"
 visible = false
 
 [node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.962976, 0.083457, 0.139721, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/RedWins"]
-offset_left = 499.0
+offset_left = 565.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1270.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 1 - Red Wins!"
+text = "Red Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/RedWins"]
 offset_left = 622.0
@@ -339,19 +339,19 @@ text = "Rematch?"
 visible = false
 
 [node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.175144, 0.452617, 1, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/BlueWins"]
-offset_left = 499.0
+offset_left = 542.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1247.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 2 - Blue Wins!"
+text = "Blue Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/BlueWins"]
 offset_left = 622.0
@@ -366,11 +366,11 @@ text = "Rematch?"
 stream = ExtResource("18_v31nm")
 parameters/looping = true
 
-[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_instructions_pressed"]
-[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
 [connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
 [connection signal="pressed" from="Splash/Theme/NextTheme" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]
