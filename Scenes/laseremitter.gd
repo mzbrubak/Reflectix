@@ -57,11 +57,11 @@ func set_rotation_from_state(rotationstate):
 		Vector3i(-1,0,0):
 			$Rotation.rotation=PI
 		Vector3i(-1,1,0):
-			$Rotation.rotation=5*PI/2
+			$Rotation.rotation=5*PI/4
 		Vector3i(0,1,0):
 			$Rotation.rotation=3*PI/2
 		Vector3i(1,1,0):
-			$Rotation.rotation=7*PI/2
+			$Rotation.rotation=7*PI/4
 
 		#Then the 3D states
 
