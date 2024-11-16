@@ -41,12 +41,12 @@ frame = 2
 script = ExtResource("3_vmr8s")
 selector = ExtResource("4_yrhnj")
 
-[node name="MirrorSurface1" type="StaticBody2D" parent="Rotation"]
+[node name="MirrorSurface" type="StaticBody2D" parent="Rotation"]
 
-[node name="Mirror" type="CollisionShape2D" parent="Rotation/MirrorSurface1"]
+[node name="Mirror" type="CollisionShape2D" parent="Rotation/MirrorSurface"]
 shape = SubResource("SegmentShape2D_xv2ec")
 
-[node name="Laser" parent="Rotation/MirrorSurface1" instance=ExtResource("2_nysg1")]
+[node name="Laser" parent="Rotation/MirrorSurface" instance=ExtResource("2_nysg1")]
 position = Vector2(-2, 2)
 target_position = Vector2(-50, 50)
 
