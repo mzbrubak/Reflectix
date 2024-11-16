@@ -40,6 +40,7 @@ func reflect(hit_ref):
 	var mirror_normal=self.get_collision_normal()
 	var laser_direction=target_position.rotated(parent_rotation)#to go from local to global
 	laser_direction=laser_direction.bounce(mirror_normal.normalized()).snapped(Vector2(1,1))
+	#print(laser_direction)
 	if zcomp==0:#i.e. if we're operating in the 2D plane
 		reflected_laser.updateandfire(get_collision_point(),laser_direction.normalized()*1000)
 	else:#if using 3D

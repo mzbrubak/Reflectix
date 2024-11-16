@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://djqevu5mpndwa"]
+[gd_scene load_steps=23 format=3 uid="uid://djqevu5mpndwa"]
 
 [ext_resource type="PackedScene" uid="uid://dkuug16ke60wh" path="res://Scenes/laseremitter.tscn" id="1_g7mjg"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nomae"]
@@ -10,11 +10,15 @@
 [ext_resource type="Script" path="res://Scenes/player_2_pieces.gd" id="8_nj1uy"]
 [ext_resource type="Texture2D" uid="uid://dd3qagwj88i63" path="res://img/background.png" id="10_71mxc"]
 [ext_resource type="Texture2D" uid="uid://dqjc7kw0ssd5c" path="res://theme/GWJ-Full-Logo-tag-Orange2.svg" id="11_fp07y"]
+[ext_resource type="Texture2D" uid="uid://c2po1delixic8" path="res://img/tutorial/tutorial-move2.png" id="11_sonqs"]
 [ext_resource type="Texture2D" uid="uid://cxp11ivlusbtt" path="res://theme/theme.png" id="12_brtvm"]
 [ext_resource type="Texture2D" uid="uid://dbvgt8w1ruyle" path="res://theme/wildcards.png" id="13_35aso"]
+[ext_resource type="Texture2D" uid="uid://by8peo3f4vkwq" path="res://img/tutorial/tutorial-destroy.png" id="13_dc34e"]
 [ext_resource type="FontFile" uid="uid://cybpab1vbk3w" path="res://fonts/Oswald/Oswald-VariableFont_wght.ttf" id="14_olf2d"]
+[ext_resource type="Texture2D" uid="uid://cfbjmfju3dxtq" path="res://img/tutorial/tutorial-win.png" id="14_x4kk4"]
 [ext_resource type="FontFile" uid="uid://u3xv5vfc63a4" path="res://fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf" id="15_83dkl"]
 [ext_resource type="FontFile" uid="uid://bd8y3x518wj4o" path="res://fonts/Lato/Lato-Regular.ttf" id="16_874sp"]
+[ext_resource type="Texture2D" uid="uid://ysgytqnyt7k7" path="res://img/tutorial/tutorial-rotate.png" id="17_0jjg0"]
 [ext_resource type="Texture2D" uid="uid://c87vpdpb57be5" path="res://img/end-condition-modal.png" id="17_d8u63"]
 [ext_resource type="FontFile" uid="uid://ceyr2s00fa1n" path="res://fonts/Sedgwick_Ave_Display/SedgwickAveDisplay-Regular.ttf" id="18_5oqf6"]
 [ext_resource type="AudioStream" uid="uid://drl6lc6fv5vro" path="res://music/Melody.ogg" id="18_v31nm"]
@@ -30,7 +34,7 @@ texture = ExtResource("10_71mxc")
 position = Vector2(-130, 60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(3.7, 3.7)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 script = ExtResource("3_xtao0")
@@ -104,16 +108,92 @@ state = Vector3i(1, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
 visible = false
+offset = Vector2(-282, -69)
+transform = Transform2D(1, 0, 0, 1, -282, -69)
 
 [node name="Splash" type="CanvasLayer" parent="."]
+
+[node name="Instructions" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
+
+[node name="Background" type="Sprite2D" parent="Splash/Instructions"]
+position = Vector2(960, 547.47)
+scale = Vector2(1, 1.01198)
+texture = ExtResource("10_71mxc")
+
+[node name="Move" type="Label" parent="Splash/Instructions"]
+offset_left = 176.0
+offset_top = 13.0
+offset_right = 859.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Click Objects to Move"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Move"]
+position = Vector2(302.254, 291)
+scale = Vector2(0.60146, 0.621243)
+texture = ExtResource("11_sonqs")
+
+[node name="Rotate" type="Label" parent="Splash/Instructions"]
+offset_left = 1056.0
+offset_top = 12.0
+offset_right = 1752.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Rotate When Selected"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Rotate"]
+position = Vector2(348.25, 284.703)
+scale = Vector2(1.45477, 1.45477)
+texture = ExtResource("17_0jjg0")
+
+[node name="Destroy" type="Label" parent="Splash/Instructions"]
+offset_left = 217.0
+offset_top = 475.0
+offset_right = 715.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Destroy Objects"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Destroy"]
+position = Vector2(257.75, 354.234)
+scale = Vector2(1.30205, 1.30205)
+texture = ExtResource("13_dc34e")
+
+[node name="Win" type="Label" parent="Splash/Instructions"]
+offset_left = 1010.0
+offset_top = 473.0
+offset_right = 1968.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("14_olf2d")
+theme_override_font_sizes/font_size = 87
+text = "Win: Destroy Their Laser"
+
+[node name="Sprite2D" type="Sprite2D" parent="Splash/Instructions/Win"]
+position = Vector2(414.5, 340.691)
+scale = Vector2(1.66797, 1.64378)
+texture = ExtResource("14_x4kk4")
+
+[node name="NextInstructions" type="Button" parent="Splash/Instructions"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
 scale = Vector2(0.66, 0.66)
 transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
-position = Vector2(1125.76, 689.894)
-scale = Vector2(1.17266, 1.27573)
+position = Vector2(960, 560.348)
+scale = Vector2(1, 1.03583)
 texture = ExtResource("10_71mxc")
 
 [node name="Headline" type="Label" parent="Splash/Credits"]
@@ -126,52 +206,53 @@ theme_override_font_sizes/font_size = 115
 text = "Reflectrix"
 
 [node name="Subtitle" type="Label" parent="Splash/Credits"]
-offset_left = 540.0
-offset_top = 161.0
-offset_right = 1375.0
-offset_bottom = 276.0
+offset_left = 426.0
+offset_top = 173.0
+offset_right = 1530.0
+offset_bottom = 288.0
 theme_override_fonts/font = ExtResource("15_83dkl")
 theme_override_font_sizes/font_size = 68
-text = "A strategy laser chess game"
+text = "A 2 Player Strategy Laser Chess Game"
 
 [node name="Credits" type="Label" parent="Splash/Credits"]
-offset_left = 180.0
+offset_left = 217.0
 offset_top = 283.0
-offset_right = 585.0
+offset_right = 622.0
 offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
 text = "Credits"
 
 [node name="Credit Names" type="Label" parent="Splash/Credits"]
-offset_left = 133.0
-offset_top = 428.0
-offset_right = 593.0
-offset_bottom = 704.0
+offset_left = 77.0
+offset_top = 425.0
+offset_right = 799.0
+offset_bottom = 701.0
 theme_override_fonts/font = ExtResource("16_874sp")
 theme_override_font_sizes/font_size = 60
-text = "Felix DuBois
-NathanSDunn
-PurpleHues"
+text = "Felix DuBois (code)
+NathanSDunn (code, music)
+PurpleHues (art)"
 
 [node name="Assets" type="Label" parent="Splash/Credits"]
-offset_left = 1117.0
-offset_top = 283.0
-offset_right = 1522.0
-offset_bottom = 455.0
+offset_left = 1150.0
+offset_top = 282.0
+offset_right = 1555.0
+offset_bottom = 454.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 87
 text = "Assets"
 
 [node name="Assets Names" type="Label" parent="Splash/Credits"]
-offset_left = 758.0
+offset_left = 923.0
 offset_top = 432.0
-offset_right = 1841.0
+offset_right = 2006.0
 offset_bottom = 1080.0
 theme_override_fonts/font = ExtResource("16_874sp")
 theme_override_font_sizes/font_size = 37
-text = "Royalty Free Sound:
+text = "We created new art, music & code.
 
+Royalty Free Sound Effects:
 https://pixabay.com/sound-effects/laser-zap-90575/
 
 https://pixabay.com/sound-effects/
@@ -180,20 +261,29 @@ explosion-sound-effect-2-241820/
 https://pixabay.com/sound-effects/
 game-over-39-199830/
 
-Fonts: 
-Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display (OFL)"
+Open Font Licensed:
+Oswald, Lato, Sedgwick_Ave, Sedgwick_Ave_Display"
+
+[node name="NextCredits" type="Button" parent="Splash/Credits"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
 scale = Vector2(0.66, 0.66)
 transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
-position = Vector2(1128.03, 686.106)
-scale = Vector2(1.17503, 1.26871)
+position = Vector2(960, 584.591)
+scale = Vector2(1, 1.08072)
 texture = ExtResource("10_71mxc")
 
 [node name="GGJWild" type="Sprite2D" parent="Splash/Theme"]
-position = Vector2(320, 393)
+position = Vector2(320, 338)
 scale = Vector2(0.5765, 0.5765)
 texture = ExtResource("11_fp07y")
 
@@ -213,33 +303,41 @@ anchors_preset = -1
 anchor_right = 0.122
 anchor_bottom = 0.563
 offset_left = 115.0
-offset_top = 664.0
-offset_right = 422.16
-offset_bottom = 627.64
+offset_top = 558.0
+offset_right = 387.16
+offset_bottom = 471.64
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
-theme_override_font_sizes/normal_font_size = 206
+theme_override_font_sizes/normal_font_size = 211
 text = " #75"
+
+[node name="NextTheme" type="Button" parent="Splash/Theme"]
+offset_left = 194.0
+offset_top = 875.0
+offset_right = 425.0
+offset_bottom = 982.0
+theme_override_fonts/font = ExtResource("18_5oqf6")
+theme_override_font_sizes/font_size = 75
+text = "Next!"
 
 [node name="RedWins" type="CanvasLayer" parent="Splash"]
 visible = false
-offset = Vector2(-144, -72)
-scale = Vector2(0.8, 0.8)
-transform = Transform2D(0.8, 0, 0, 0.8, -144, -72)
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.962976, 0.083457, 0.139721, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/RedWins"]
-offset_left = 499.0
+offset_left = 565.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1270.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 1 - Red Wins!"
+text = "Red Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/RedWins"]
 offset_left = 622.0
@@ -252,24 +350,23 @@ text = "Rematch?"
 
 [node name="BlueWins" type="CanvasLayer" parent="Splash"]
 visible = false
-offset = Vector2(-144, -72)
-scale = Vector2(0.8, 0.8)
-transform = Transform2D(0.8, 0, 0, 0.8, -144, -72)
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.175144, 0.452617, 1, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/BlueWins"]
-offset_left = 499.0
+offset_left = 542.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1247.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 2 - Blue Wins!"
+text = "Blue Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/BlueWins"]
 offset_left = 622.0
@@ -284,5 +381,11 @@ text = "Rematch?"
 stream = ExtResource("18_v31nm")
 parameters/looping = true
 
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_instructions_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Theme/NextTheme" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]

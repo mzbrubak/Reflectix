@@ -7,6 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrs1n"]
 
 [node name="Selector" type="Area2D" groups=["selectors"]]
+visible = false
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("2_dhy8e")
@@ -19,4 +20,14 @@ script = ExtResource("3_cir4s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rrs1n")
 
+[node name="RenderTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="RenderTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="MoveTimer" to="Sprite2D" method="_on_move_timer_timeout"]

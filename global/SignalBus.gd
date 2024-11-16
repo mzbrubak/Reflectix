@@ -9,6 +9,7 @@ signal set_piece_rotation(newstate)#goal: when pressing a button in rotation UI,
 signal move_made(move:bool)
 signal undo_disabled(disabled)
 signal end_condition(state)
+signal selector_derender
 
 var piece_location = null
 var has_move_been_made:bool = false

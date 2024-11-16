@@ -6,27 +6,31 @@ extends Node2D
 @onready var activeplayerUI=$"UI/VBoxContainer/ActivePlayer"
 var move_made=false
 var active_player=0#0=player 1, 1=player 2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#splash	
 	SignalBus.end_condition.connect(_on_end_condition)
-	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(3).timeout
-	$Splash/Theme.visible = false
-	if SignalBus.already_seen_splash==false:
-		await get_tree().create_timer(3).timeout
+	if SignalBus.already_seen_splash==true:
+		$Splash/Theme.visible = false
+		$Splash/Credits.visible = false
+		$Splash/Instructions.visible = false
+		start_game()
+
+func start_game():	
 	SignalBus.music = $Music
 	SignalBus.music.play()
-	$Splash/Credits.visible = false
 	SignalBus.already_seen_splash=true
 	$UI.visible=true#so I can hide it in editor
 	endturn.connect(P1Laser.fire_laser)
 	P1Laser.laser_fired.connect(post_laser_fired)
 	SignalBus.move_made.connect(on_move_made)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
 
 func on_move_made(move):
 	endturn_button.disabled=!move#disabled if move not yet made
@@ -46,6 +50,7 @@ func post_laser_fired():
 	endturn_button.text="End Turn"
 	SignalBus.selection.emit(false)
 
+
 func switch_turns():
 	endturn.disconnect(switch_turns)
 	get_tree().call_group("BeamSegments","turnoff")
@@ -54,18 +59,19 @@ func switch_turns():
 		endturn.connect(P2Laser.fire_laser)
 		P2Laser.laser_fired.connect(post_laser_fired)
 		active_player=1
-		activeplayerUI.text="Player 2"
+		activeplayerUI.text="Blue Player"
 		SignalBus.is_player1_moving.emit(false)
 	elif active_player==1:
 		endturn.connect(P1Laser.fire_laser)
 		P1Laser.laser_fired.connect(post_laser_fired)
 		active_player=0
-		activeplayerUI.text="Player 1"
+		activeplayerUI.text="Red Player"
 		SignalBus.is_player1_moving.emit(true)
 	SignalBus.piece.emit(null)
 	SignalBus.move_made.emit(false)
 	SignalBus.piece_location=null
 	SignalBus.piece_rotation_state=null
+		
 		
 func _on_end_condition(state):
 	if state == true:
@@ -73,7 +79,20 @@ func _on_end_condition(state):
 	elif state == false:
 		$Splash/BlueWins.visible = true
 		
-	
+		
 func _on_rematch_pressed():
 	SignalBus.rematch()
 	get_tree().reload_current_scene()
+
+
+func _on_next_theme_pressed() -> void:	
+	$Splash/Theme.visible = false
+
+
+func _on_next_credits_pressed() -> void:
+	$Splash/Credits.visible = false
+
+
+func _on_next_instructions_pressed() -> void:
+	$Splash/Instructions.visible = false
+	start_game()
