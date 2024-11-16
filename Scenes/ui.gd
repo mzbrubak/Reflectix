@@ -10,6 +10,7 @@ var move_piece;
 func _ready():
 	SignalBus.piece.connect(_on_piece)
 	SignalBus.undo_disabled.connect(_on_undo_disabled)
+	SignalBus.end_turn_button=$"VBoxContainer/End Turn"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

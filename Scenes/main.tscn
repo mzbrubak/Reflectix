@@ -34,7 +34,7 @@ texture = ExtResource("10_71mxc")
 position = Vector2(-130, 60)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(3.7, 3.7)
 
 [node name="Player1Pieces" type="Node2D" parent="."]
 script = ExtResource("3_xtao0")
@@ -108,13 +108,18 @@ state = Vector3i(1, 1, 0)
 
 [node name="UI" parent="." instance=ExtResource("5_ctrvt")]
 visible = false
+offset = Vector2(-282, -69)
+transform = Transform2D(1, 0, 0, 1, -282, -69)
 
 [node name="Splash" type="CanvasLayer" parent="."]
 
 [node name="Instructions" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Instructions"]
-position = Vector2(960, 541)
+position = Vector2(960, 547.47)
+scale = Vector2(1, 1.01198)
 texture = ExtResource("10_71mxc")
 
 [node name="Move" type="Label" parent="Splash/Instructions"]
@@ -183,9 +188,12 @@ theme_override_font_sizes/font_size = 75
 text = "Next!"
 
 [node name="Credits" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Credits"]
-position = Vector2(960, 541)
+position = Vector2(960, 560.348)
+scale = Vector2(1, 1.03583)
 texture = ExtResource("10_71mxc")
 
 [node name="Headline" type="Label" parent="Splash/Credits"]
@@ -266,9 +274,12 @@ theme_override_font_sizes/font_size = 75
 text = "Next!"
 
 [node name="Theme" type="CanvasLayer" parent="Splash"]
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Background" type="Sprite2D" parent="Splash/Theme"]
-position = Vector2(960, 541)
+position = Vector2(960, 584.591)
+scale = Vector2(1, 1.08072)
 texture = ExtResource("10_71mxc")
 
 [node name="GGJWild" type="Sprite2D" parent="Splash/Theme"]
@@ -293,8 +304,8 @@ anchor_right = 0.122
 anchor_bottom = 0.563
 offset_left = 115.0
 offset_top = 558.0
-offset_right = 299.76
-offset_bottom = 270.96
+offset_right = 387.16
+offset_bottom = 471.64
 theme_override_fonts/normal_font = ExtResource("14_olf2d")
 theme_override_font_sizes/normal_font_size = 211
 text = " #75"
@@ -310,21 +321,23 @@ text = "Next!"
 
 [node name="RedWins" type="CanvasLayer" parent="Splash"]
 visible = false
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Modal" type="Sprite2D" parent="Splash/RedWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.962976, 0.083457, 0.139721, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/RedWins"]
-offset_left = 499.0
+offset_left = 565.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1270.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 1 - Red Wins!"
+text = "Red Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/RedWins"]
 offset_left = 622.0
@@ -337,21 +350,23 @@ text = "Rematch?"
 
 [node name="BlueWins" type="CanvasLayer" parent="Splash"]
 visible = false
+scale = Vector2(0.66, 0.66)
+transform = Transform2D(0.66, 0, 0, 0.66, 0, 0)
 
 [node name="Modal" type="Sprite2D" parent="Splash/BlueWins"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.175144, 0.452617, 1, 0.666667)
 position = Vector2(825, 477.5)
 scale = Vector2(0.648958, 0.806481)
 texture = ExtResource("17_d8u63")
 
 [node name="Player Wins" type="Label" parent="Splash/BlueWins"]
-offset_left = 499.0
+offset_left = 542.0
 offset_top = 344.0
-offset_right = 1204.0
+offset_right = 1247.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("14_olf2d")
 theme_override_font_sizes/font_size = 98
-text = "Player 2 - Blue Wins!"
+text = "Blue Player Wins!"
 
 [node name="Button" type="Button" parent="Splash/BlueWins"]
 offset_left = 622.0
@@ -366,11 +381,11 @@ text = "Rematch?"
 stream = ExtResource("18_v31nm")
 parameters/looping = true
 
-[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Instructions/NextInstructions" to="." method="_on_next_instructions_pressed"]
-[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_credits_pressed"]
+[connection signal="pressed" from="Splash/Credits/NextCredits" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/Theme/NextTheme" to="." method="_on_next_theme_pressed"]
 [connection signal="pressed" from="Splash/RedWins/Button" to="." method="_on_rematch_pressed"]
 [connection signal="pressed" from="Splash/BlueWins/Button" to="." method="_on_rematch_pressed"]

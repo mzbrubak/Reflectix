@@ -6,8 +6,8 @@
 [ext_resource type="FontFile" uid="uid://cg7xhypjiany5" path="res://fonts/Lato/Lato-Black.ttf" id="3_of26l"]
 
 [node name="UI Layer" type="CanvasLayer"]
-offset = Vector2(-282, -69)
-transform = Transform2D(1, 0, 0, 1, -282, -69)
+offset = Vector2(-24, -69)
+transform = Transform2D(1, 0, 0, 1, -24, -69)
 script = ExtResource("1_7jko1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -16,10 +16,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -164.0
-offset_top = 9.0
-offset_right = 3.0
-offset_bottom = 101.0
+offset_left = 47.0
+offset_top = -39.0
+offset_right = 273.0
+offset_bottom = 108.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -27,7 +27,7 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_g1ayi")
 theme_override_font_sizes/font_size = 46
-text = "Player 1
+text = " Red Player
 "
 
 [node name="Undo" type="Button" parent="VBoxContainer"]
@@ -44,18 +44,17 @@ theme_override_font_sizes/font_size = 26
 disabled = true
 text = "Fire Laser"
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(2, 83)
+[node name="Node2D" type="Node2D" parent="VBoxContainer"]
+position = Vector2(13, 178)
 
-[node name="RotationUI" parent="Node2D" instance=ExtResource("2_rl77h")]
+[node name="RotationUI" parent="VBoxContainer/Node2D" instance=ExtResource("2_rl77h")]
 custom_minimum_size = Vector2(64, 64)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1743.0
-offset_top = 619.0
-offset_right = 1807.0
-offset_bottom = 683.0
+offset_top = -1.0
+offset_right = 64.0
+offset_bottom = 63.0
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(3, 3)

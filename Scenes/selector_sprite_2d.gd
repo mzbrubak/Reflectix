@@ -16,7 +16,6 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if is_pixel_opaque(get_local_mouse_position()):			
 			SignalBus.selector_derender.emit()
-			print("pre-timer:"+name)
 			$"../MoveTimer".start()
 
 func _on_piece(piece_node):
@@ -26,7 +25,6 @@ func _on_derender():
 	$"..".visible = false
 
 func _on_move_timer_timeout() -> void:	
-	print("timer:"+name)
 	var pos = $"..".position
 	SignalBus.piece_location = $"../..".position
 	move_piece.position += pos

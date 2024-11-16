@@ -27,8 +27,8 @@ func destroy():
 	else:
 		$Rotation/OpaqueSurface/Rubble/BlueRubble.visible = true
 	$Rotation/CollisionShape2D.visible = false
-	$Rotation.collision_mask = 0
-	$Rotation.collision_layer = 0
+	#$Rotation.collision_mask = 0
+	#$Rotation.collision_layer = 0
 	z_index = 0
 	
 	await get_tree().create_timer(.3).timeout

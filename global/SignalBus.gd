@@ -16,6 +16,7 @@ var has_move_been_made:bool = false
 var piece_rotation_state=null
 var already_seen_splash=false
 var rotate_piece=null
+var end_turn_button=null
 
 var music=null
 
