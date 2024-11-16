@@ -44,6 +44,7 @@ func set_player2():
 	#$Rotation/Body/Laser.mesh.material.albedo_color = Color(0,0,255,0)
 
 func set_rotation_from_state(rotationstate):
+	state=rotationstate
 	match rotationstate:
 		#First the 2D states
 		Vector3i(1,0,0):

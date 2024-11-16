@@ -34,6 +34,7 @@ func set_player2():
 	$Rotation/Blue.visible = true
 
 func set_rotation_from_state(rotationstate):
+	state=rotationstate
 	match rotationstate:
 		#First the 2D states
 		Vector3i(-1,-1,0):
