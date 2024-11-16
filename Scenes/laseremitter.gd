@@ -23,6 +23,7 @@ func fire_laser():
 	laser_fired.emit()
 	
 func destroy():	
+	SignalBus.end_turn_button.disabled = true
 	SignalBus.music.stop()	
 	$Timer.start()	
 
